@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Gabriela Moura engenharia";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*//Icons http://bootstrapmaster.com/live/real-static/icons-simple-line-icons.html*@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>GMengenhariasp</title>
+    <!-- CSS -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/animate.css" rel="stylesheet">
+
+    <!-- Custom styles CSS -->
+    <link href="/assets/css/style.css" rel="stylesheet" media="screen">
+
+    <script src="/assets/js/modernizr.custom.js"></script>
+
+    <script type="text/javascript">
+
+        //data: { destinatario: email }, //our data
+        function enviaEmail() {
+            if (validaCampos() == true) {
+                $('#status').show();
+                $('#preloader').show();
+                var destinatario = document.getElementById("email").value;
+                var mensagem = document.getElementById("message").value;
+                var name = document.getElementById("name").value;
+                var url = 'http://apis.tecnologia.ws/email.php?' + 'Email=' + destinatario + '&Message=' + mensagem + '&Name=' + name + '&SiteNumber=cicero';
+
+                $.ajax({
+                    url: url, //your server side script
+                    data: {},
+                    type: 'GET',
+                    success: function (data) {
+                        $('#status').fadeOut();
+                        $('#preloader').delay(300).fadeOut('slow');
+                        alert("E-mail enviado!");
+                    },
+                    error: function (jxhr, msg, err) {
+                        $('#status').fadeOut();
+                        $('#preloader').delay(300).fadeOut('slow');
+                        alert("E-mail enviado!!");
+                    }
+                });
+            } else {
+                alert("Fill all the fields.");
+            }
+
+        }
+        function validaCampos() {
+
+            var validacao = true;
+
+            if (document.getElementById("email").value == "") {
+                validacao = false;
+            }
+
+            if (document.getElementById("message").value == "") {
+                validacao = false;
+            }
+
+            if (document.getElementById("name").value == "") {
+                validacao = false;
+            }
+
+            return validacao;
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+    <!-- Home start -->
+    <section id="ahomeCicero" class="pfblock-image screen-height">
+        <div class="home-overlay"></div>
+        <div class="intro">
+            @*<div class="start">Engenharia</div>*@
+            @*<h1>Gamasp</h1>*@
+            <img src="~/img/site_em_construcao.jpg" style="width:33%; height:33%;" alt="Alternate Text" />
+            @*<div class="start">Construções e Reformas</div>*@
+        </div>
+        <a href="#services">
+           
+        </a>
+    </section>
+    
+
+
+    <!-- Scroll to top end-->
+    <!-- Javascript files -->
+    <script src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.parallax-1.1.3.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.js"></script>
+    <script src="/assets/js/jquery.sticky.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    <script src="/assets/js/wow.min.js"></script>
+    <script src="/assets/js/jquery.easypiechart.js"></script>
+    <script src="/assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/jquery.cbpQTRotator.js"></script>
+    <script src="/assets/js/custom.js"></script>
+</body>
+</html>
