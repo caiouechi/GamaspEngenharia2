@@ -71,3 +71,4 @@ D:\Github\GamaspEngenharia2\GMProject\CaioUechi\bin\System.Web.WebPages.Razor.xm
 D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.csproj.CopyComplete
 D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.dll
 D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.pdb
+D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.csprojAssemblyReference.cache

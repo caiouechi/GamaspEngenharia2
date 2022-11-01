@@ -280,14 +280,9 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="footer-widget info-widget">
-                                <h2>Contate-nos</h2>
-                                @*<p class="first-par">You can contact or visit us during working time.</p>*@
-                                <p><span>Tel: </span> (11) 9.4743-0418</p>
-                                <p><span>Email: </span> gamasp.engenharia@gmail.com</p>
-                                <p><span>Horário comercial: </span> 8:00 a.m - 17:00 a.m</p>
-                                <p>Entre em contato conosco e conheça mais dos nossos serviços.</p>
-                            </div>
+                            @{
+                                Html.RenderPartial("ContateNos");
+                            }
                         </div>
                     </div>
                 </div>

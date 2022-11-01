@@ -27,7 +27,9 @@
 
 
 </head>
+
 <body>
+
 
     <!-- Container -->
     <div id="container">
@@ -39,7 +41,7 @@
                     <div class="col-sm-12 col-md-8 col-lg-8">
                         <div class="col-sm-12 col-md-8 col-lg-8">
                             <ul class="inline">
-                                <li><i class="fa fa-envelope"></i> &nbsp;gamasp.engenharia@gmail.com</li>
+                                <li><i class="fa fa-envelope"></i> &nbsp;comercial@gamaspengenharia.com.br</li>
                                 <li>&nbsp;&nbsp;&nbsp;<i class="fa fa-phone"></i> &nbsp;(11) 9.4743-0418</li>
                             </ul>
                         </div>
@@ -460,8 +462,8 @@
                                         <div class="img-box">
                                             <a href="/Home/DetalheApartamento"><img src="/upload/others/ser2.jpg" alt="Awesome Image"></a>
                                             @*<div class="img-caption">
-                                                <div class="box-holder"></div>
-                                            </div>*@
+                                                    <div class="box-holder"></div>
+                                                </div>*@
                                         </div>
                                     </div>
                                     <div class="post-content-text">
@@ -547,20 +549,20 @@
                         </div>
                     </div>
                     @*<div class="col-md-6 col-sm-6">
-                        <div class="team-box">
-                            <div class="team-inner">
-                                @*<img src="/upload/team/2.jpg" alt="">
-                                <div class="mask"></div>
-                                <ul class="team-social-list">
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                    <li><a href="https://www.facebook.com/gm.engcivil/"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
+                            <div class="team-box">
+                                <div class="team-inner">
+                                    @*<img src="/upload/team/2.jpg" alt="">
+                                    <div class="mask"></div>
+                                    <ul class="team-social-list">
+                                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="https://www.facebook.com/gm.engcivil/"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                                <h6>Alessandro Silva</h6>
+                                <div class="subtext">Supervisor de obras</div>
                             </div>
-                            <h6>Alessandro Silva</h6>
-                            <div class="subtext">Supervisor de obras</div>
-                        </div>
-                    </div>*@
+                        </div>*@
                 </div>
             </div>
         </section>
@@ -622,15 +624,16 @@
                             <div class="footer-widget">
                                 <h2>Nossos Serviços</h2>
                                 <ul class="link-list">
-                                    <li><a href="petroleum.html">Construção Civil</a></li>
-                                    <li><a href="chemical.html">Pintura</a></li>
-                                    <li><a href="material.html">Piso (laminado/vinilico/porcelanato)</a></li>
-                                    <li><a href="mechanical.html">Gesso Liso</a></li>
-                                    <li><a href="power.html">Dry-Wall</a></li>
-                                    <li><a href="agricultural.html">Sanca</a></li>
-                                    <li><a href="agricultural.html">Revestimento</a></li>
-                                    <li><a href="agricultural.html">Elétrica</a></li>
-                                    <li><a href="agricultural.html">Hidraulica</a></li>
+                                    <li><p>Análise da edificação e seus documentos</p></li>
+                                    <li><p>Identificação de possíveis irregularidades construtivas com relação às leis e normas vigentes (Código de Obras, Lei de Zoneamento, etc);</p></li>
+                                    <li><p>Elaboração do projeto de regularização da edificação;</p></li>
+                                    <li><p>Montagem e gerenciamento do processo para a regularização ou anistia;</p></li>
+                                    <li><p>Obtenção do Auto de Regularização</p></li>
+                                    <li><p>Desdobro de Lote</p></li>
+                                    <li><p>Habite-se</p></li>
+                                    <li><p>Laudo Técnico</p></li>
+                                    <li><p>Remembramento de Lote</p></li>
+                                    <li><p>Usucapião</p></li>
                                 </ul>
                             </div>
                         </div>
@@ -645,14 +648,9 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="footer-widget info-widget">
-                                <h2>Contate-nos</h2>
-                                @*<p class="first-par">You can contact or visit us during working time.</p>*@
-                                <p><span>Tel: </span> (11) 9.4743-0418</p>
-                                <p><span>Email: </span> gamasp.engenharia@gmail.com</p>
-                                <p><span>Horário comercial: </span> 8:00 a.m - 17:00 a.m</p>
-                                <p>Entre em contato conosco e conheça mais dos nossos serviços.</p>
-                            </div>
+                            @{
+                                Html.RenderPartial("ContateNos");
+                            }
                         </div>
                     </div>
                 </div>

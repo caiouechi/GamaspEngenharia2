@@ -524,6 +524,7 @@
     <Content Include="Views\Home\DetalheCozinha.cshtml" />
     <Content Include="Views\Shared\_socialTop.cshtml" />
     <Content Include="Views\Home\DetalheOceans.cshtml" />
+    <Content Include="Views\Shared\ContateNos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
