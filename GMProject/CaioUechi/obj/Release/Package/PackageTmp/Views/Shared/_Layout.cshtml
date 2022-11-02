@@ -2,32 +2,53 @@
 <html>
 <head>
 
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <title>@ViewBag.Title</title>
-    @*@Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")*@
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Gamasp Engenharia SP</title>
 
-    	<!-- BASICS -->
-        <meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BASICS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />	
-		<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="/css/bootstrap.css">
-		<link rel="stylesheet" href="/css/bootstrap-theme.css">
-        <link rel="stylesheet" href="/css/style.css">
-		<!-- skin -->
+    <link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- skin -->
     <link rel="stylesheet" href="/skin/default.css">
 
+    <style>
+        .whats-app {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 100px;
+            right: 130px;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+    </style>
+
 </head>
+
 <body>
+    <a class="whats-app" href="https://api.whatsapp.com/send?phone=5511947430418&text=Ola!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o" target="_blank">
+        <img src="~/images/whatsapp-png-image-9.png" style="width:100px;height:100px;"/>
+    </a>
+
     @RenderBody()
 
-    @*@Scripts.Render("~/bundles/jquery")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

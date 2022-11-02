@@ -402,7 +402,6 @@
     <Content Include="img\portfolio\tortoise-rendered.jpg" />
     <Content Include="img\portfolio\treinamento-mobile-proservico-caiouechi-developer.jpg" />
     <Content Include="img\portfolio\welbe-caiouechi-developer.jpg" />
-    <Content Include="img\site_em_construcao.jpg" />
     <Content Include="img\team\member1.png" />
     <Content Include="img\team\member2.png" />
     <Content Include="img\team\member3.jpg" />
@@ -423,6 +422,7 @@
     <Content Include="7stroke\fonts\Pe-icon-7-stroke.ttf" />
     <Content Include="7stroke\fonts\Pe-icon-7-stroke.woff" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="img\portfolio\img1.jpg" />
     <Content Include="img\portfolio\img2.jpg" />
