@@ -72,3 +72,4 @@ D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.csproj.CopyC
 D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.dll
 D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.pdb
 D:\Github\GamaspEngenharia2\GMProject\CaioUechi\obj\Debug\CaioUechi.csprojAssemblyReference.cache
+D:\Github\GamaspEngenharia2\GMProject\CaioUechi\bin\images\service\5.png

@@ -308,13 +308,21 @@
     <Content Include="images\servicebg.png" />
     <Content Include="images\service\1.jpg" />
     <Content Include="images\service\2.jpg" />
+    <Content Include="images\service\2.png" />
     <Content Include="images\service\3.jpg" />
     <Content Include="images\service\4.jpg" />
     <Content Include="images\service\5.jpg" />
+    <Content Include="images\service\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\service\6.jpg" />
+    <Content Include="images\service\6.png" />
     <Content Include="images\service\7.jpg" />
+    <Content Include="images\service\7.png" />
     <Content Include="images\service\8.jpg" />
     <Content Include="images\service\9.jpg" />
+    <Content Include="images\service\9.png" />
+    <Content Include="images\service\9b.png" />
     <Content Include="images\service\backup\1.jpg" />
     <Content Include="images\service\backup\2.jpg" />
     <Content Include="images\service\backup\3.jpg" />
@@ -328,6 +336,7 @@
     <Content Include="images\service\service-top.jpg" />
     <Content Include="images\t-bg.jpg" />
     <Content Include="images\title-icon-yellow.png" />
+    <Content Include="images\whatsapp-png-image-9.png" />
     <Content Include="images\who-bg.jpg" />
     <Content Include="images\who-img.jpg" />
     <Content Include="images\why.jpg" />

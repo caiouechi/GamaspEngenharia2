@@ -1,4 +1,7 @@
-﻿<!doctype html>
+﻿@{
+    ViewBag.Title = "Cicero engenharia";
+}
+<!doctype html>
 
 
 <html lang="en" class="no-js">
@@ -82,7 +85,7 @@
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li>
-                                            <a href="#">Home</a>
+                                            <a href="/home/index">Home</a>
                                         </li>
 
                                         @*<li class="drop">*@
@@ -107,7 +110,7 @@
 
                                         </li>*@
                                         <li class="drop">
-                                            <a href="/Home/Galeria">Galeria</a>
+                                            <a class="active" href="/Home/Galeria">Galeria</a>
                                             @*<ul class="dropdown">
                                                 <li><a href="gallery-2col.html">Gallery 2 Colums</a></li>
                                                 <li><a href="gallery-3col.html">Gallery 3 Colums</a></li>
@@ -115,7 +118,7 @@
                                             </ul>*@
                                         </li>
                                         <li class="drop">
-                                            <a class="active" href="/home/Servicos">Serviços</a>
+                                            <a href="/home/Servicos">Serviços</a>
                                             @*<ul class="dropdown">
                                                 <li><a href="blog.html">Blog Default</a></li>
                                                 <li><a href="blog-3col.html">Blog 3 Colums</a></li>
@@ -149,190 +152,176 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Nossos serviços</h2>
-                        @*<ul class="page-depth">
-                            <li><a href="index.html">construct</a></li>
-                            <li><a href="about.html">Services</a></li>
-                        </ul>*@
+                        <h2>Galeria</h2>
+                        <ul class="page-depth">
+                            @*<li><a href="index.html">construct</a></li>
+                            <li><a href="about.html">Gallery</a></li>*@
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
         <!-- End page-banner section -->
-        <!-- services-offer
+        <!-- projects-page section
         ================================================== -->
-        <section class="welcome_sec">
+        <section class="projects-page-section">
+
             <div class="container">
-                <div class="row welcome welcome_details">
-                    <div class="col-md-12">
-
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/6.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Usucapião e regularização de imóveis</h3></a>
-                            <p>Conte com nossa equipe de especialistas em memorial descritivo e planta para Usucapião e Regularização de Imóveis. Faça seu memorial e planta conosco, a melhor empresa do setor.;</p>
-                        </div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/5.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
+                <div class="row welcome_heading">
+                    <h2>Nossos Projetos</h2>
+                    <p>Confira algumas das obras já realizadas pela Gamasp Engenharia.</p>
+                </div>
             </div>
-            <a href=""><h3>Alvenaria e acabamentos</h3></a>
-            <p>Trabalhamos com alvenaria em geral, todo tipo de acabamento, revestimento e afins. Nós construímos do seu sonho do começo ao fim;</p>
-        </div>*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/5.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
+            <div class="gallery">
+                <div class="container">
+                    <ul class="filter">
+                        <li><a class="active" href="#" data-filter="*">Mostrar todas</a></li>
+                        <li><a href="#" data-filter=".reforma">Reformas</a></li>
+                        <li><a href="#" data-filter=".construcao">Construção</a></li>
+                    </ul>
+
+                    <div class="project-box iso-call">
+
+                        <div class="project-post construcao">
+                            <a href="/Home/DetalheApartamento"><img src="/upload/projects/16.jpg" alt=""></a>
+
+                            <div class="hover-box">
+                                <h2><a href="/Home/DetalheApartamento">Bom retiro/SP</a></h2>
+                                <span>Reforma completa de apartamento;</span>
                             </div>
-                            <a href=""><h3>Principais vantagens de uma construção financiada</h3></a>
-                            <p>Oferecemos um serviço completo de construção, desde a consultoria para financiamento do terreno e da obra até o acompanhamento da construção. Nossa equipe inclui arquitetos para projetar o imóvel, engenheiros para cálculos estruturais e projetos elétricos e hidráulicos, além de cuidarmos de toda a documentação necessária;</p>
                         </div>
 
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/9.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
+                        <div class="project-post construcao">
+                            <a href="/Home/DetalheCozinha"><img src="/upload/projects/17.jpg" alt=""></a>
+                            <div class="hover-box">
+                                <h2><a href="/Home/DetalheCozinha">Guarulhos/SP</a></h2>
+                                <span>Reforma completa de cozinha;</span>
                             </div>
-                            <a href=""><h3>Cursos e Treinamentos</h3></a>
-                            <p>Os cursos de NRs são essenciais para capacitar profissionais a entender e cumprir as Normas Regulamentadoras. Esses cursos abordam temas como segurança do trabalho, prevenção de acidentes, saúde ocupacional e legislação trabalhista, preparando os participantes para aplicar os requisitos legais em seus ambientes de trabalho. Eles são fundamentais para garantir a segurança e saúde dos trabalhadores e para o cumprimento das exigências legais pelas empresas;</p>
-                        </div>
-                        <div class="spacer-40"></div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/6.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Pintura</h3></a>
-            <p>Da escolha das cores até o acabamento, conte conosco para pinturas internas e externas. Trabalhamos com pintura em geral, comercial, residencial e predial.</p>
-        </div>*@
-                        @*aquimano*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/3.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Planejamento de obras</h3></a>
-                            <p>Elaboramos o cronograma de toda a sua obra, assim como fazemos o gerenciamento dos materiais necessários, evitando custos e desperdícios desnecessários;</p>
-                        </div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/2.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Hidráulica</h3></a>
-            <p>Realizamos serviços hidráulicos em geral;</p>
-        </div>*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/2.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Oferecemos diversos tipos de laudos</h3></a>
-                            <p>
-                                1.	Laudo Estrutural: Descreve patologias e correções estruturais.
-                                <br />
-                                2.	Laudo de Reforma: Utilizado para aprovação de reformas em condomínios.
-                                <br />
-                                3.	Laudo de Vizinhança: Realizado antes da construção para evitar problemas futuros com vizinhos.
-                                <br />
-                                4.	Laudo de Danos Físicos: Emitido quando uma obra vizinha impacta a sua durante a construção.
-                                <br />
-                                5.	Laudo de Patologias: Utilizado para identificar e solucionar problemas causados por patologias na edificação.
-                                <br />
-                            </p>
                         </div>
 
+                        <div class="project-post reforma">
+                            <a href="/Home/DetalheOceans"><img src="/upload/projects/11.jpg" alt=""></a>
 
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/9b.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
+                            <div class="hover-box">
+                                <h2><a href="/Home/DetalheOceans">Condomínio Oceanis/SP</a></h2>
+                                <span>Reforma completa de apartamento;</span>
                             </div>
-                            <a href=""><h3>Vistorias residências ou Apartamentos</h3></a>
-                            <p>Realizamos vistorias de recebimento e de compra de imóveis para garantir que o cliente não enfrente problemas futuros. Na vistoria de recebimento, verificamos detalhes importantes que muitas vezes passam despercebidos pelo cliente, como pingadeiras das janelas e nível do box do chuveiro. Já na vistoria de compra, é essencial contar com um engenheiro capacitado para verificar questões estruturais que podem afetar o uso do imóvel no futuro;</p>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/1.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Carapicuíba/SP</a></h2>
+                                <span>Execução de pintura externa;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/2.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Alto da Lapa/SP</a></h2>
+                                <span>Execução de forro de DryWall e iluminação;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/3.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Residencial 8 Tamboré/SP</a></h2>
+                                <span>Execução de pintura interna e externa;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/4.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Banco Itaú - Osasco/SP</a></h2>
+                                <span>Inversão de portas – AVCB e acabamentos de pintura;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/5.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Condomínio Jardins do Brasil/SP</a></h2>
+                                <span>Reforma interna completa</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/6.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Condomínio Jardins do Brasil/S</a></h2>
+                                <span>Reforma interna completa;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/7.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">São Paulo/SP</a></h2>
+                                <span>Reforma interna e externa completa de clínica médica;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/8.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Condomínio Innova Blue/SP</a></h2>
+                                <span>Execução de pintura e acabamentos;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/9.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Banco PAN/SP</a></h2>
+                                <span>Reforma completa;</span>
+                            </div>
+                        </div>
+                        <div class="project-post reforma">
+                            <img src="/upload/projects/10.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Banco PAN/SP</a></h2>
+                                <span>Reforma de sala comercial completa;</span>
+                            </div>
                         </div>
 
-
-                        <div class="spacer-40"></div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/7.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Elétrica</h3></a>
-            <p>Execução de serviços elétricos em residências, prédios e comércios;</p>
-        </div>*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/7.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
+                        <div class="project-post construcao">
+                            <img src="/upload/projects/12.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Ibiúna/SP</a></h2>
+                                <span>Terraplanagem;</span>
                             </div>
-                            <a href=""><h3>Serviços e cartórios de imóveis</h3></a>
-                            <p>oferecemos serviços essenciais para a legalização e registro de propriedades. Isso inclui registro de escrituras, contratos, hipotecas, entre outros documentos relacionados à propriedade imobiliária. Também emite certidões de matrícula e realiza averbações de construções e alterações. Esses serviços garantem a segurança jurídica das transações imobiliárias e a regularização dos imóveis;</p>
                         </div>
 
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/9.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Pisos e revestimentos </h3></a>
-            <p>Colocação de pisos e revestimentos com mão-de-obra especializada em pisos vinílico, laminado, cerâmico, porcelanato, granito e concreto;</p>
-        </div>*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/4.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
+                        <div class="project-post construcao">
+                            <img src="/upload/projects/13.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Itu/SP</a></h2>
+                                <span>Concretagem;</span>
                             </div>
-                            <a href=""><h3>Reformas</h3></a>
-                            <p>Realizamos pequenas e grandes reformas, residenciais, comerciais e industriais;</p>
-                        </div>
-                        @*aqui*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/1.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Projetos</h3></a>
-                            <p>Elaboramos projetos arquitetônicos, executivos e de interiores e, também fazemos a aprovação junto aos órgãos competentes;</p>
                         </div>
 
-
-
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/8.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
+                        <div class="project-post construcao">
+                            <img src="/upload/projects/14.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Itu/SP</a></h2>
+                                <span>
+                                    Execução de quadra
+                                    Poliesportiva;
+                                </span>
                             </div>
-                            <a href=""><h3>Gesso/Dry Wall</h3></a>
-                            <p>Realizamos a instalação e manutenção de drywall, assim como a aplicação de gesso, forros, sancas, molduras e etc;</p>
                         </div>
-                    </div>
-                </div> <!-- End Row -->
-            </div> <!-- End container -->
-        </section>
-        <!-- End services-offer section -->
-        @*<section class="experience-section">
-            <div class="container">
-                <div class="support-box">
-                    <div class="col-md-12">
-                        <h2>
-                            25 Years of Experience <br>
-                            <small>in standard industrial systems</small>
-                        </h2>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                        <br>
-                        <a href="https://themeforest.net/checkout/13941544" class="button-one">Call now</a>
+
+                        <div class="project-post construcao">
+                            <img src="/upload/projects/15.jpg" alt="">
+                            <div class="hover-box">
+                                <h2><a href="#">Itu/SP</a></h2>
+                                <span>Execução de reforma externa;</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
             </div>
-        </section>*@
-
-
+        </section>
+        <!-- End projects-page section -->
+        <!-- Purchase Now
+            ================================================== -->
+        <!-- footer
+        ================================================== -->
         <footer>
             <div class="up-footer">
                 <div class="container">
@@ -411,6 +400,7 @@
 
     </div>
     <!-- End Container -->
+
 
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.migrate.js"></script>
