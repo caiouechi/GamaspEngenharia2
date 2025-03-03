@@ -14,6 +14,12 @@ namespace CaioUechi
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+            name: "RegularizacaoRedirect",
+            url: "regularizacao-de-imoveis-com-parceria-tecnica-especializada",
+            defaults: new { controller = "Home", action = "RegularizacaoImovel" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

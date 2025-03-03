@@ -48,7 +48,7 @@
                                 <li><a href="https://www.facebook.com/gm.engcivil"><i class="fa fa-facebook"></i> </a></li>
                                 @*<li><a href="#"><i class="fa fa-twitter"></i> </a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>*@
-                                <li><a href="https://instagram.com/gm.engcivil?igshid=1wcvymrxczf57"><i class="fa fa-instagram"></i> </a></li>
+                                <li><a href="https://www.instagram.com/eng_gamasp"><i class="fa fa-instagram"></i> </a></li>
                             </ul>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                             <li><i class="fa fa-phone"></i><span>(11) 9.4743-0418</span></li>
                             <li><i class="fa fa-envelope-o"></i><a href="#">comercial@gamaspengenharia.com.br</a></li>
                             <li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/gamasp.engenharia">@@gamasp.engenharia</a></li>
-                            <li><i class="fa fa-instagram"></i><a href="https://instagram.com/eng_gamasp">@@eng_gamasp</a></li>
+                            <li><i class="fa fa-instagram"></i><a href="https://www.instagram.com/eng_gamasp">@@eng_gamasp</a></li>
                         </ul>
                     </div>
                 </div>
@@ -227,15 +227,18 @@
                                 </p>
                                 <ul class="social-links social-links_mod-a list-inline">
                                     @*<li><a target="_blank" href="https://twitter.com/"><i class="icons fa fa-twitter"></i></a></li>*@
-                                    <li><a target="_blank" href="https://www.facebook.com/gm.engcivil/"><i class="icons fa fa-facebook"></i></a></li>
-                                    <li><a target="_blank" href="https://www.linkedin.com/"><i class="icons fa fa-linkedin"></i></a></li>
-                                    @*<li><a target="_blank" href="https://www.google.com/"><i class="icons fa fa-google-plus"></i></a></li>*@
-                                    <li><a target="_blank" href="https://www.instagram.com/"><i class="icons fa fa-instagram"></i></a></li>
+                                    @*<li><a target="_blank" href="https://www.facebook.com/gm.engcivil/"><i class="icons fa fa-facebook"></i></a></li>*@
+                                    @*<li><a target="_blank" href="https://www.linkedin.com/"><i class="icons fa fa-linkedin"></i></a></li>*@
+                                    <li>
+                                        <a href="https://www.youtube.com/%40motivaengenharia" target="_blank"><i class="icons fa fa-google-plus"></i></a>
+                                        </a>
+                                    </li>
+                                    <li><a target="_blank" href="https://www.instagram.com/eng_gamasp"><i class="icons fa fa-instagram"></i></a></li>
                                 </ul>
 
                             </div>
                         </div>
-                              <div class="col-md-3">
+                        <div class="col-md-3">
                             <div class="footer-widget">
                                 <h2>Nossos Serviços</h2>
                                 <ul class="link-list">
@@ -263,14 +266,9 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="footer-widget info-widget">
-                                <h2>Contate-nos</h2>
-                                @*<p class="first-par">You can contact or visit us during working time.</p>*@
-                                <p><span>Tel: </span> (11) 9.4743-0418</p>
-                                <p><span>Email: </span> comercial@gamaspengenharia.com.br</p>
-                                <p><span>Horário comercial: </span> 8:00 a.m - 17:00 a.m</p>
-                                <p>Entre em contato conosco e conheça mais dos nossos serviços.</p>
-                            </div>
+                            @{
+                                Html.RenderPartial("ContateNos");
+                            }
                         </div>
                     </div>
                 </div>

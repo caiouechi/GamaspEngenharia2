@@ -17,6 +17,11 @@ namespace CaioUechi.Controllers
             return View();
         }
 
+        public ActionResult RegularizacaoImovel()
+        {
+            return View();
+        }
+
         public ActionResult Carousel()
         {
             return View();
