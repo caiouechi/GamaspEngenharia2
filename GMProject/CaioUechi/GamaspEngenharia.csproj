@@ -534,6 +534,9 @@
     <Content Include="Views\Home\DetalheOceans.cshtml" />
     <Content Include="Views\Shared\ContateNos.cshtml" />
     <Content Include="Views\Home\FaleConosco.cshtml" />
+    <Content Include="Views\Home\Site2.cshtml" />
+    <Content Include="Views\Home\Site3.cshtml" />
+    <Content Include="Views\Home\Site4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -12,18 +12,45 @@
 
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Playfair|Open+Sans|Montserrat|Roboto+Slab'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Playfair|Open+Sans|Montserrat|Roboto+Slab'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/stroke-gap.css" media="screen">
-
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/css/jquery.bxslider.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/7stroke/css/pe-icon-7-stroke.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/css/animate.css" media="screen">
-    <!-- REVOLUTION BANNER CSS SETTINGS -->
     <link rel="stylesheet" type="text/css" href="/css/settings.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
 
+    <!-- Custom CSS for overlay effect -->
+    <style>
+        .entry-image {
+            position: relative;
+            cursor: pointer;
+        }
 
+        .entry-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .entry-image:hover .entry-overlay {
+            opacity: 1;
+        }
+    </style>
 
 
 </head>
@@ -144,7 +171,7 @@
         </header>
         <!-- End Header -->
         <!-- page-banner-section
-        ================================================== -->
+    ================================================== -->
         <section class="page-banner-section">
             <div class="container">
                 <div class="row">
@@ -160,257 +187,865 @@
         </section>
         <!-- End page-banner section -->
         <!-- services-offer
-        ================================================== -->
+    ================================================== -->
         <section class="welcome_sec">
             <div class="container">
                 <div class="row welcome welcome_details">
                     <div class="col-md-12">
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/6.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Usucapião e regularização de imóveis</h3></a>
-                            <p>Conte com nossa equipe de especialistas em memorial descritivo e planta para Usucapião e Regularização de Imóveis. Faça seu memorial e planta conosco, a melhor empresa do setor.;</p>
-                        </div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/5.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Alvenaria e acabamentos</h3></a>
-            <p>Trabalhamos com alvenaria em geral, todo tipo de acabamento, revestimento e afins. Nós construímos do seu sonho do começo ao fim;</p>
-        </div>*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/5.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Principais vantagens de uma construção financiada</h3></a>
-                            <p>Oferecemos um serviço completo de construção, desde a consultoria para financiamento do terreno e da obra até o acompanhamento da construção. Nossa equipe inclui arquitetos para projetar o imóvel, engenheiros para cálculos estruturais e projetos elétricos e hidráulicos, além de cuidarmos de toda a documentação necessária;</p>
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal1">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/6.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"><h3>Regularização de Imóveis com Parceria Técnica Especializada</h3></a>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/9.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Cursos e Treinamentos</h3></a>
-                            <p>Os cursos de NRs são essenciais para capacitar profissionais a entender e cumprir as Normas Regulamentadoras. Esses cursos abordam temas como segurança do trabalho, prevenção de acidentes, saúde ocupacional e legislação trabalhista, preparando os participantes para aplicar os requisitos legais em seus ambientes de trabalho. Eles são fundamentais para garantir a segurança e saúde dos trabalhadores e para o cumprimento das exigências legais pelas empresas;</p>
-                        </div>
-                        <div class="spacer-40"></div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/6.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Pintura</h3></a>
-            <p>Da escolha das cores até o acabamento, conte conosco para pinturas internas e externas. Trabalhamos com pintura em geral, comercial, residencial e predial.</p>
-        </div>*@
-                        @*aquimano*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/3.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Planejamento de obras</h3></a>
-                            <p>Elaboramos o cronograma de toda a sua obra, assim como fazemos o gerenciamento dos materiais necessários, evitando custos e desperdícios desnecessários;</p>
-                        </div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/2.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Hidráulica</h3></a>
-            <p>Realizamos serviços hidráulicos em geral;</p>
-        </div>*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/2.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Oferecemos diversos tipos de laudos</h3></a>
-                            <p>
-                                1.	Laudo Estrutural: Descreve patologias e correções estruturais.
-                                <br />
-                                2.	Laudo de Reforma: Utilizado para aprovação de reformas em condomínios.
-                                <br />
-                                3.	Laudo de Vizinhança: Realizado antes da construção para evitar problemas futuros com vizinhos.
-                                <br />
-                                4.	Laudo de Danos Físicos: Emitido quando uma obra vizinha impacta a sua durante a construção.
-                                <br />
-                                5.	Laudo de Patologias: Utilizado para identificar e solucionar problemas causados por patologias na edificação.
-                                <br />
-                            </p>
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal2">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/7.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"><h3>Aquisição terreno e construção caixa seria ótimo investimento </h3></a>
                         </div>
 
+                        @*3*@
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal3">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/8.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <h3>
+                                    Segurança e Treinamento em Normas Regulamentadoras (NR's)
+                                </h3>
+                            </a>
+                        </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/9b.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Vistorias residências ou Apartamentos</h3></a>
-                            <p>Realizamos vistorias de recebimento e de compra de imóveis para garantir que o cliente não enfrente problemas futuros. Na vistoria de recebimento, verificamos detalhes importantes que muitas vezes passam despercebidos pelo cliente, como pingadeiras das janelas e nível do box do chuveiro. Já na vistoria de compra, é essencial contar com um engenheiro capacitado para verificar questões estruturais que podem afetar o uso do imóvel no futuro;</p>
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal4">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/9.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <h3>
+                                    AVCB: Segurança e Regularização para sua Empresa ou Condomínio!
+                                </h3>
+                            </a>
                         </div>
 
-
-                        <div class="spacer-40"></div>
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/7.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Elétrica</h3></a>
-            <p>Execução de serviços elétricos em residências, prédios e comércios;</p>
-        </div>*@
+                        @* 5 *@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/7.png" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Serviços e cartórios de imóveis</h3></a>
-                            <p>oferecemos serviços essenciais para a legalização e registro de propriedades. Isso inclui registro de escrituras, contratos, hipotecas, entre outros documentos relacionados à propriedade imobiliária. Também emite certidões de matrícula e realiza averbações de construções e alterações. Esses serviços garantem a segurança jurídica das transações imobiliárias e a regularização dos imóveis;</p>
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal5">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/10.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <h3>
+                                    Projetos para Prefeituras e Arquitetônicos + Complementares
+                                </h3>
+                            </a>
                         </div>
-
-                        @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="entry-image">
-                <img class="img-responsive" src="/images/service/9.jpg" alt="images">
-                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-            </div>
-            <a href=""><h3>Pisos e revestimentos </h3></a>
-            <p>Colocação de pisos e revestimentos com mão-de-obra especializada em pisos vinílico, laminado, cerâmico, porcelanato, granito e concreto;</p>
-        </div>*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/4.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Reformas</h3></a>
-                            <p>Realizamos pequenas e grandes reformas, residenciais, comerciais e industriais;</p>
-                        </div>
-                        @*aqui*@
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/1.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Projetos</h3></a>
-                            <p>Elaboramos projetos arquitetônicos, executivos e de interiores e, também fazemos a aprovação junto aos órgãos competentes;</p>
-                        </div>
-
-
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="entry-image">
-                                <img class="img-responsive" src="/images/service/8.jpg" alt="images">
-                                <div class="entry-overlay"><i class="fa fa-expand"></i></div>
-                            </div>
-                            <a href=""><h3>Gesso/Dry Wall</h3></a>
-                            <p>Realizamos a instalação e manutenção de drywall, assim como a aplicação de gesso, forros, sancas, molduras e etc;</p>
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal6">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/11.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <h3>
+                                    Gerenciamento de Obras de Construção Civil: Planejamento e Execução Perfeita!
+                                </h3>
+                            </a>
                         </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal7">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/12.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <h3>
+                                    Pintura, Limpeza e Retrofit de Fachadas: Soluções Completas para Seu Edifício!
+                                </h3>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <!-- Wrap the image in an anchor that triggers the modal -->
+                            <a href="#" data-toggle="modal" data-target="#detailModal8">
+                                <div class="entry-image">
+                                    <img class="img-responsive" src="/images/service/13.png" alt="Service Image">
+                                    <div class="entry-overlay">
+                                        Clique para mais detalhes
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <h3>
+                                    Análise, Projeto, Instalação e Manutenção de SPDA: Segurança Total para Sua Estrutura!
+                                </h3>
+                            </a>
+                        </div>
+
                     </div>
                 </div> <!-- End Row -->
             </div> <!-- End container -->
         </section>
-        <!-- End services-offer section -->
-        @*<section class="experience-section">
-            <div class="container">
-                <div class="support-box">
-                    <div class="col-md-12">
-                        <h2>
-                            25 Years of Experience <br>
-                            <small>in standard industrial systems</small>
-                        </h2>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                        <br>
-                        <a href="https://themeforest.net/checkout/13941544" class="button-one">Call now</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>*@
 
 
-    <footer>
-        <div class="up-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h2>Sobre nós</h2>
-                            Empresa especializada em construção e reformas de pequeno e médio porte.
-                            <p>
-                                Parceria, comprometimento com prazos e
-                                resultados fazem parte do nosso DNA!
-                            </p>
-                            <ul class="social-links social-links_mod-a list-inline">
-                                @*<li><a target="_blank" href="https://twitter.com/"><i class="icons fa fa-twitter"></i></a></li>*@
-                                @*<li><a target="_blank" href="https://www.facebook.com/gm.engcivil/"><i class="icons fa fa-facebook"></i></a></li>*@
-                                @*<li><a target="_blank" href="https://www.linkedin.com/"><i class="icons fa fa-linkedin"></i></a></li>*@
-                                <li>
-                                    <a href="https://www.youtube.com/%40motivaengenharia" target="_blank"><i class="icons fa fa-google-plus"></i></a>
-                                    </a>
-                                </li>
-                                <li><a target="_blank" href="https://www.instagram.com/eng_gamasp"><i class="icons fa fa-instagram"></i></a></li>
-                            </ul>
+        <div class="modal fade" id="detailModal1" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title and Intro -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-star"></i>
+                            </span>
+                            Regularização de Imóveis com Parceria Técnica Especializada
+                        </h4>
+                        <p>
+                            <strong style="color: #0099FF;">
+                                <i class="fa fa-question-circle"></i> Precisa regularizar seu imóvel por usucapião?
+                            </strong><br>
+                            Conte com uma equipe técnica e jurídica que entende do assunto!
+                        </p>
 
-                        </div>
+                        <!-- What We Offer -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #009900;">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            O que oferecemos:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Levantamento topográfico e mapas detalhados.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Projetos técnicos para regularização junto às prefeituras.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Laudos técnicos, pareceres e avaliações judiciais.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Documentação completa para processos de usucapião.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Acompanhamento técnico em todas as etapas do processo.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Regularização documental (CNO, SERO, Habite-se).</li>
+                        </ul>
+
+                        <!-- Why Choose Us -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-thumbs-up"></i>
+                            </span>
+                            Por que escolher nossa parceira?
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Trabalhamos ao lado de advogados especialistas em usucapião.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Soluções personalizadas para cada tipo de processo na parte jurídica.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Serviços personalizados com total transparência e eficiência.</li>
+                        </ul>
+
+                        <!-- Contact -->
+                        <h5 style="margin-top: 1em;">Entre em contato conosco:</h5>
+                        <p>
+                            <i class="fa fa-envelope"></i> comercial@gamaspengenharia.com.br <br>
+                            <i class="fa fa-phone"></i> (11) 94743-0418
+                        </p>
+
+                        <!-- Footer Note -->
+                        <p>
+                            <strong>GAMA SP ENGENHARIA:</strong> Tornando sua regularização mais fácil e eficiente!
+                        </p>
                     </div>
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h2>Nossos Serviços</h2>
-                            <ul class="link-list">
-                                <li><p>Análise da edificação e seus documentos</p></li>
-                                <li><p>Identificação de possíveis irregularidades construtivas com relação às leis e normas vigentes (Código de Obras, Lei de Zoneamento, etc);</p></li>
-                                <li><p>Elaboração do projeto de regularização da edificação;</p></li>
-                                <li><p>Montagem e gerenciamento do processo para a regularização ou anistia;</p></li>
-                                <li><p>Obtenção do Auto de Regularização</p></li>
-                                <li><p>Desdobro de Lote</p></li>
-                                <li><p>Habite-se</p></li>
-                                <li><p>Laudo Técnico</p></li>
-                                <li><p>Remembramento de Lote</p></li>
-                                <li><p>Usucapião</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h2>Links rápidos</h2>
-                            <ul class="link-list">
-                                <li><a href="#">Whatsapp</a></li>
-                                <li><a href="#">Instagram</a></li>
-                                <li><a href="#">Facebook</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        @{
-                            Html.RenderPartial("ContateNos");
-                        }
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class=" copyright">
-            <div class="container ">
-                <div class="pull-left">
-                    <p class="">
-                        &copy; Copyright "Gamasp Engenharia" 2016. All rights reserved.
-                    </p>
+
+        <div class="modal fade" id="detailModal2" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-home"></i>
+                            </span>
+                            Terreno e Construção: O Caminho para Sua Casa Própria!
+                        </h4>
+
+                        <!-- Intro Text -->
+                        <p>
+                            Realize o sonho da casa própria com um time que entende do assunto!
+                        </p>
+
+                        <!-- Services Offered -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #009900;">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Do início ao fim, nós cuidamos de tudo:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Escolha do terreno ideal.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Projeto arquitetônico personalizado.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Planejamento completo da obra.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Execução com materiais e mão de obra de qualidade.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Regularização documental (CNO, SERO, Habite-se).</li>
+                        </ul>
+
+                        <!-- Why Choose Us -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-thumbs-up"></i>
+                            </span>
+                            Por que nos escolher?
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Experiência em transformar terrenos em lares dos sonhos.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Soluções sob medida para cada projeto.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Acompanhamento técnico em todas as etapas.</li>
+                        </ul>
+
+                        <!-- Contact Info -->
+                        <p>
+                            <strong>Contato:</strong><br>
+                            <i class="fa fa-envelope"></i> comercial@gamaspengenharia.com.br<br>
+                            <i class="fa fa-phone"></i> (11) 94743-0418
+                        </p>
+
+                        <!-- Closing Note -->
+                        <p>
+                            <strong>GAMA SP ENGENHARIA</strong> — Construindo sua felicidade, do chão ao teto!
+                        </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
-                <div class="pull-right">
-                    <p class="">
-                        Cicero
-                        <br />Engenharia Responsável
-                    </p>
+            </div>
+        </div>
+
+        <div class="modal fade" id="detailModal3" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-shield"></i>
+                            </span>
+                            Serviços de Consultoria e Treinamento em NR's: Segurança em Primeiro Lugar!
+                        </h4>
+                        <p>
+                            <strong>Sua empresa em conformidade com as Normas Regulamentadoras (NR's)!</strong>
+                        </p>
+
+                        <!-- O que oferecemos -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #009900;">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            O que oferecemos:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Treinamentos práticos e teóricos em NR's (NR-10, NR-12, NR-35 e mais).</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Consultoria para adequação às exigências legais.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Elaboração de PPRA, PCMSO, LTCAT e outros documentos.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Avaliações e inspeções técnicas.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Acompanhamento e suporte especializado.</li>
+                        </ul>
+
+                        <!-- Benefícios para sua empresa -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-thumbs-up"></i>
+                            </span>
+                            Benefícios para sua empresa:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Redução de riscos e acidentes.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Cumprimento das normas trabalhistas e legais.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Treinamentos personalizados para sua equipe.</li>
+                        </ul>
+
+                        <!-- Contact Info -->
+                        <p>
+                            <strong>Contato:</strong><br>
+                            <i class="fa fa-envelope"></i> comercial@gamaspengenharia.com.br<br>
+                            <i class="fa fa-whatsapp"></i> (11) 94743-0418
+                        </p>
+
+                        <!-- Footer Note -->
+                        <p>
+                            <strong>GAMA SP ENGENHARIA</strong> — Construindo sua segurança em primeiro lugar!
+                        </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="detailModal4" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-fire-extinguisher"></i>
+                            </span>
+                            AVCB: Segurança e Regularização para sua Empresa ou Condomínio!
+                        </h4>
+
+                        <!-- What is AVCB? -->
+                        <p>
+                            <strong>O que é o AVCB?</strong><br>
+                            O Auto de Vistoria do Corpo de Bombeiros, conhecido como Vistoria de Bombeiros,
+                            é um documento essencial emitido pelo Corpo de Bombeiros que comprova que seu
+                            empreendimento atende às normas de segurança contra incêndios.
+                        </p>
+
+                        <!-- Why is it Important? -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #009900;">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Por que é importante?
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Garantir a segurança de empregados, clientes e moradores.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Evitar multas e interdições.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Assegurar a regularização junto a parceiros e órgãos.</li>
+                        </ul>
+
+                        <!-- Our Services -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-cogs"></i>
+                            </span>
+                            Nossos serviços incluem:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Consultoria para adequações às normas de segurança.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Elaboração de projetos preventivos de incêndio (PPCI).</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Acompanhamento durante inspeções e emissões de laudos.</li>
+                        </ul>
+
+                        <!-- Urgency Note -->
+                        <p>
+                            <strong>Não deixe para última hora!</strong> Garanta sua segurança e evite multas ou interdições.
+                        </p>
+
+                        <!-- Contact Info -->
+                        <p>
+                            <strong>Contato:</strong> comercial@gamaspengenharia.com.br<br>
+                            <strong>WhatsApp:</strong> (11) 94743-0418<br>
+                            <strong>Link Zap:</strong> <a href="https://wa.link/59co0m" target="_blank">https://wa.link/59co0m</a>
+                        </p>
+
+                        <!-- Footer Note -->
+                        <p>
+                            <strong>GAMA SP ENGENHARIA</strong> — Segurança e conformidade para o sucesso do seu negócio!
+                        </p>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="detailModal5" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-building"></i>
+                            </span>
+                            Projetos para Prefeituras e Arquitetônicos + Complementares
+                        </h4>
+
+                        <!-- Introduction -->
+                        <p><strong>O que oferecemos?</strong></p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>
+                                <span style="color: #009900;"><i class="fa fa-angle-right"></i></span>
+                                <strong>Projetos Arquitetônicos Personalizados:</strong> Planejamento completo de espaços funcionais e modernos.
+                            </li>
+                            <li>
+                                <span style="color: #009900;"><i class="fa fa-angle-right"></i></span>
+                                <strong>Regularização em Prefeituras:</strong> Documentação e aprovação de projetos conforme normas locais.
+                            </li>
+                            <li>
+                                <span style="color: #009900;"><i class="fa fa-angle-right"></i></span>
+                                <strong>Projetos Complementares:</strong> Estrutural, elétrico, hidráulico, prevenção de incêndio, e mais.
+                            </li>
+                            <li>
+                                <span style="color: #009900;"><i class="fa fa-angle-right"></i></span>
+                                <strong>Acompanhamento Técnico:</strong> Suporte em todas as etapas do processo.
+                            </li>
+                        </ul>
+
+                        <!-- Benefits -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-thumbs-up"></i>
+                            </span>
+                            Benefícios para você:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Agilidade na aprovação dos projetos.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Conformidade com as exigências legais e técnicas.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Soluções completas em engenharia e arquitetura.</li>
+                        </ul>
+
+                        <!-- Contact Info -->
+                        <p>
+                            <strong>Contato:</strong> comercial@gamaspengenharia.com.br<br>
+                            <strong>WhatsApp:</strong> (11) 94743-0418
+                        </p>
+
+                        <!-- Footer Note -->
+                        <p>
+                            <strong>GAMA SP ENGENHARIA</strong> — Transformando ideias em realidade com excelência!
+                        </p>
+                        <p>
+                            <strong>LINK ZAP:</strong>
+                            <a href="https://wa.link/f4pkj" target="_blank">https://wa.link/f4pkj</a>
+                        </p>
+                    </div>
+
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="detailModal6" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-building"></i>
+                            </span>
+                            Gerenciamento de Obras de Construção Civil: Planejamento e Execução Perfeita!
+                        </h4>
+
+                        <!-- Introduction -->
+                        <p><strong>O que envolve o gerenciamento de obras?</strong></p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Gestão de Recursos:</strong> Coordenação de mão de obra, materiais e equipamentos.
+                            </li>
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Planejamento e Controle:</strong> Elaboração e acompanhamento de orçamentos, cronogramas e qualidade.
+                            </li>
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Soluções Inteligentes:</strong> Identificação e resolução de problemas para evitar atrasos.
+                            </li>
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Supervisão Técnica:</strong> Monitoramento detalhado em todas as etapas da obra.
+                            </li>
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Conformidade Legal:</strong> Garantia do cumprimento das normas regulamentadoras e leis vigentes.
+                            </li>
+                        </ul>
+
+                        <!-- Results -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Resultados que você pode esperar:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Obras entregues dentro do prazo e orçamento.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Qualidade superior em cada etapa.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Redução de riscos e maior segurança.</li>
+                        </ul>
+
+                        <!-- Contact Info -->
+                        <p>
+                            <strong>Contato:</strong> comercial@gamaspengenharia.com.br<br>
+                            <strong>WhatsApp:</strong> (11) 94743-0418
+                        </p>
+
+                        <!-- Footer Note -->
+                        <p>
+                            <strong>GAMA SP ENGENHARIA</strong> — Gerenciando suas obras com excelência e confiança!
+                        </p>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="detailModal7" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-paint-brush"></i>
+                            </span>
+                            Pintura, Limpeza e Retrofit de Fachadas: Soluções Completas para Seu Edifício!
+                        </h4>
+
+                        <!-- Services Offered -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #009900;">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Nossos serviços especializados incluem:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Lavagem com Hidrojateamento – Fachadas de vidro, pastilha cerâmica e pintura.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Tratamento e Impermeabilização – Trincas, fissuras e infiltrações.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Restauração e Recomposição – Tijolos aparentes, rebocos e pinturas especiais.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Retrofit e Revitalização – Acabamento e renovação estética de fachadas.</li>
+                            <li><span style="color: #009900;"><i class="fa fa-angle-right"></i></span> Pintura Interna e Externa – Renovação perfeita para todos os ambientes.</li>
+                        </ul>
+
+                        <!-- Differentials -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-star"></i>
+                            </span>
+                            Diferenciais:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Monitoramento técnico por engenheiro civil especializado.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Total atenção às normas de segurança e do trabalho (NR-18).</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Equipamentos adequados e equipe treinada para grandes alturas.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Emissão de ART e projetos de execução.</li>
+                        </ul>
+
+                        <!-- Benefits -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #0000FF;">
+                                <i class="fa fa-thumbs-up"></i>
+                            </span>
+                            Benefícios:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #0000FF;"><i class="fa fa-angle-right"></i></span> Planejamento detalhado e logística eficiente.</li>
+                            <li><span style="color: #0000FF;"><i class="fa fa-angle-right"></i></span> Garantia de qualidade em materiais e serviços.</li>
+                            <li><span style="color: #0000FF;"><i class="fa fa-angle-right"></i></span> Valorização patrimonial e proteção contra fissuras, infiltrações e oxidações.</li>
+                        </ul>
+
+                        <!-- Contact Info -->
+                        <p>
+                            <strong>Contato:</strong> comercial@gamaspengenharia.com.br<br>
+                            <strong>WhatsApp:</strong> (11) 94743-0418
+                        </p>
+
+                        <!-- Footer Note -->
+                        <p>
+                            <strong>GAMA SP ENGENHARIA</strong> — Fachadas revitalizadas com segurança e excelência!
+                        </p>
+                    </div>
+
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="detailModal8" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="detailModalLabel">Detalhes do Serviço</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Title -->
+                        <h4>
+                            <span style="color: #FF9900;">
+                                <i class="fa fa-bolt"></i>
+                            </span>
+                            Análise, Projeto, Instalação e Manutenção de SPDA: Segurança Total para Sua Estrutura!
+                        </h4>
+
+                        <!-- Etapas Essenciais -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #009900;">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Etapas Essenciais:
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Análise de Risco:</strong>
+                                Estudo detalhado da estrutura, com base na NBR 5419:2015, utilizando software especializado para determinar a necessidade de instalação de SPDA e definir o nível de proteção ideal.
+                            </li>
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Projeto SPDA:</strong>
+                                Desenvolvimento do projeto executivo técnico em planta e memorial descritivo, com dimensões e especificações do sistema de proteção contra descargas atmosféricas.
+                            </li>
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Laudo Técnico:</strong>
+                                Inspeções periódicas realizadas por profissionais habilitados, avaliando o funcionamento e eficiência do sistema e garantindo a conformidade com as normas técnicas.
+                            </li>
+                            <li>
+                                <span style="color: #009900;">
+                                    <i class="fa fa-angle-right"></i>
+                                </span>
+                                <strong>Manutenção SPDA:</strong>
+                                Execução do SPDA seguindo rigorosamente as especificações do projeto, com materiais de alta qualidade e mão de obra especializada.
+                            </li>
+                        </ul>
+
+                        <!-- Why Choose Us -->
+                        <h5 style="margin-top: 1em;">
+                            <span style="color: #FF6600;">
+                                <i class="fa fa-thumbs-up"></i>
+                            </span>
+                            Por que escolher nossos serviços?
+                        </h5>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Equipe com engenheiros especialistas em riscos de descargas atmosféricas.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Soluções personalizadas em análise, projeto, instalação e manutenção.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Cumprimento das normas técnicas vigentes.</li>
+                            <li><span style="color: #FF6600;"><i class="fa fa-angle-right"></i></span> Garantia de qualidade e segurança.</li>
+                        </ul>
+
+                        <!-- Contact Info -->
+                        <p>
+                            <strong>Contato:</strong> comercial@gamaspengenharia.com.br<br>
+                            <strong>WhatsApp:</strong> (11) 94743-0418
+                        </p>
+
+                        <!-- Footer Note -->
+                        <p>
+                            <strong>GAMA SP Engenharia</strong> — Garantindo proteção e segurança em cada etapa do seu SPD!
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-    </footer>
+        
+
+        <footer>
+            <div class="up-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+
+
+                            <div class="footer-widget">
+                                <h2>Sobre nós</h2>
+                                Empresa especializada em construção e reformas de pequeno e médio porte.
+                                <p>
+                                    Parceria, comprometimento com prazos e
+                                    resultados fazem parte do nosso DNA!
+                                </p>
+                                <ul class="social-links social-links_mod-a list-inline">
+                                    @*<li><a target="_blank" href="https://twitter.com/"><i class="icons fa fa-twitter"></i></a></li>*@
+                                    @*<li><a target="_blank" href="https://www.facebook.com/gm.engcivil/"><i class="icons fa fa-facebook"></i></a></li>*@
+                                    @*<li><a target="_blank" href="https://www.linkedin.com/"><i class="icons fa fa-linkedin"></i></a></li>*@
+                                    <li>
+                                        <a href="https://www.youtube.com/%40motivaengenharia" target="_blank"><i class="icons fa fa-google-plus"></i></a>
+                                        </a>
+                                    </li>
+                                    <li><a target="_blank" href="https://www.instagram.com/eng_gamasp"><i class="icons fa fa-instagram"></i></a></li>
+                                </ul>
+
+                            </div>
+
+                            <div id="ra-verified-seal">
+                                <script type="text/javascript" id="ra-embed-verified-seal" src="https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js" data-id="TWRGVlQyNXRrQ2FfYWdEQTpnYW1hc3AtZW5nZW5oYXJpYQ==" data-target="ra-verified-seal" data-model="1"></script>
+                            </div>
+
+                            <div id="ra-verified-seal">
+                                <script type="text/javascript" id="ra-embed-verified-seal" src="https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js" data-id="TWRGVlQyNXRrQ2FfYWdEQTpnYW1hc3AtZW5nZW5oYXJpYQ==" data-target="ra-verified-seal" data-model="2"></script>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-widget">
+                                <h2>Nossos Serviços</h2>
+                                <ul class="link-list">
+                                    <li><p>Análise da edificação e seus documentos</p></li>
+                                    <li><p>Identificação de possíveis irregularidades construtivas com relação às leis e normas vigentes (Código de Obras, Lei de Zoneamento, etc);</p></li>
+                                    <li><p>Elaboração do projeto de regularização da edificação;</p></li>
+                                    <li><p>Montagem e gerenciamento do processo para a regularização ou anistia;</p></li>
+                                    <li><p>Obtenção do Auto de Regularização</p></li>
+                                    <li><p>Desdobro de Lote</p></li>
+                                    <li><p>Habite-se</p></li>
+                                    <li><p>Laudo Técnico</p></li>
+                                    <li><p>Remembramento de Lote</p></li>
+                                    <li><p>Usucapião</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-widget">
+                                <h2>Links rápidos</h2>
+                                <ul class="link-list">
+                                    <li><a href="#">Whatsapp</a></li>
+                                    <li><a href="#">Instagram</a></li>
+                                    <li><a href="#">Facebook</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            @{
+                                Html.RenderPartial("ContateNos");
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" copyright">
+                <div class="container ">
+                    <div class="pull-left">
+                        <p class="">
+                            &copy; Copyright "Gamasp Engenharia" 2016. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="pull-right">
+                        <p class="">
+                            Cicero
+                            <br />Engenharia Responsável
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </footer>
         <!-- End footer -->
 
     </div>
