@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "gamasp",
+      "runtimeExecutable": "C:\\Program Files\\IIS Express\\iisexpress.exe",
+      "runtimeArgs": [
+        "/path:C:\\PersonalRepo\\GamaspEngenharia2\\GMProject\\GamaspEngenharia",
+        "/port:43217"
+      ],
+      "port": 43217
+    }
+  ]
+}

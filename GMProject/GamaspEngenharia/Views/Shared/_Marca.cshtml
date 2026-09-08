@@ -1,0 +1,25 @@
+@*
+    Marca Gama SP Engenharia.
+    Volume isométrico em traço + linha de nível (datum), acompanhado do logotipo
+    em tipografia viva — nítido em qualquer tamanho e herda a cor do contexto.
+
+    Uso: @Html.Partial("_Marca", "header" | "footer")
+*@
+@{
+    var variante = Model as string ?? "header";
+}
+<span class="marca marca--@variante">
+    <svg class="marca-mark" viewBox="0 0 120 120" fill="none" aria-hidden="true" focusable="false">
+        <g stroke="currentColor" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M60 26 L91.2 44 L91.2 80 L60 98 L28.8 80 L28.8 44 Z" />
+            <path d="M60 62 L60 26" />
+            <path d="M60 62 L28.8 80" />
+            <path d="M60 62 L91.2 80" />
+        </g>
+        <path d="M14 71 H106" stroke="currentColor" stroke-width="2.4" opacity=".55" stroke-linecap="round" />
+    </svg>
+    <span class="marca-texto">
+        <span class="marca-nome">Gama SP</span>
+        <span class="marca-sub">Engenharia</span>
+    </span>
+</span>

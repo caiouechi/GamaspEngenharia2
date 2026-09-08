@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Obras e Projetos";
+    ViewBag.Descricao = "Galeria de obras, reformas, retrofits de fachada e projetos executados pela Gama SP Engenharia em São Paulo.";
+    var wa = "https://api.whatsapp.com/send?phone=5511947430418&text=Ol%C3%A1!%20Vi%20a%20galeria%20de%20obras%20no%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.";
+
+    var obras = new[] {
+        new { Arq = "galeria-condominio",        Cat = "residencial", Rot = "Residencial", Tit = "Condomínio residencial entregue",     Mod = "tile--wide" },
+        new { Arq = "galeria-cozinha",           Cat = "reforma",     Rot = "Reforma",     Tit = "Cozinha — reforma completa",           Mod = "" },
+        new { Arq = "galeria-living",            Cat = "reforma",     Rot = "Reforma",     Tit = "Sala de estar reformada",              Mod = "" },
+        new { Arq = "galeria-fachada-comercial", Cat = "comercial",   Rot = "Comercial",   Tit = "Retrofit de fachada comercial",        Mod = "" },
+        new { Arq = "galeria-galpao",            Cat = "industrial",  Rot = "Industrial",  Tit = "Galpão em estrutura metálica",         Mod = "" },
+        new { Arq = "galeria-estrutura",         Cat = "obra",        Rot = "Obra",        Tit = "Armação e formas de pilar",            Mod = "" },
+        new { Arq = "svc-fachadas",              Cat = "comercial",   Rot = "Fachadas",    Tit = "Trabalho em altura com acesso por corda", Mod = "" },
+        new { Arq = "svc-terreno",               Cat = "residencial", Rot = "Residencial", Tit = "Residência em alvenaria estrutural",   Mod = "" },
+        new { Arq = "obra-aerea",                Cat = "obra",        Rot = "Obra",        Tit = "Canteiro de obras — vista aérea",      Mod = "tile--wide" },
+        new { Arq = "svc-spda",                  Cat = "obra",        Rot = "SPDA",        Tit = "Sistema de proteção contra descargas", Mod = "" },
+        new { Arq = "svc-gerenciamento",         Cat = "obra",        Rot = "Gestão",      Tit = "Supervisão técnica de canteiro",       Mod = "" }
+    };
+}
+
+<!-- ============================ CABEÇALHO ============================ -->
+<section class="page-hero">
+    <div class="page-hero-media">
+        <img src="~/images/gamasp/obra-aerea-w.jpg" alt="" aria-hidden="true" />
+    </div>
+    <div class="shell">
+        <nav class="crumbs reveal" aria-label="Você está aqui">
+            <a href="@Url.Action("Index", "Home")">Início</a>
+            <span>/</span>
+            <span>Obras</span>
+        </nav>
+        <h1 class="reveal" data-d="1">Obras e projetos</h1>
+        <p class="reveal" data-d="2">
+            Residencial, comercial, industrial e reformas. Clique em qualquer imagem para ampliar
+            — navegue com as setas do teclado.
+        </p>
+    </div>
+</section>
+
+<!-- ============================ GALERIA ============================ -->
+<section class="section section--ivory">
+    <div class="shell">
+        <div class="gallery-filters reveal" role="group" aria-label="Filtrar obras por categoria">
+            <button class="filter-btn is-active" type="button" data-filter="todos">Todas</button>
+            <button class="filter-btn" type="button" data-filter="residencial">Residencial</button>
+            <button class="filter-btn" type="button" data-filter="comercial">Comercial</button>
+            <button class="filter-btn" type="button" data-filter="industrial">Industrial</button>
+            <button class="filter-btn" type="button" data-filter="reforma">Reformas</button>
+            <button class="filter-btn" type="button" data-filter="obra">Canteiro</button>
+        </div>
+
+        <div class="grid-gallery">
+            @{ var i = 0; }
+            @foreach (var o in obras)
+            {
+                i++;
+                <button class="tile @o.Mod reveal" data-d="@(i % 4)" type="button"
+                        data-cat="@o.Cat"
+                        data-full="@Url.Content("~/images/gamasp/" + o.Arq + ".jpg")"
+                        data-caption="@o.Tit">
+                    <img src="~/images/gamasp/@(o.Arq)-w.jpg"
+                         srcset="@Url.Content("~/images/gamasp/" + o.Arq + "-w.jpg") 1600w, @Url.Content("~/images/gamasp/" + o.Arq + "-xl.jpg") 2400w"
+                         sizes="(min-width: 1100px) 42vw, 100vw"
+                         alt="@o.Tit" loading="lazy" />
+                    <span class="tile-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5M11 8v6M8 11h6" /></svg>
+                    </span>
+                    <span class="tile-caption">
+                        <em>@o.Rot</em>
+                        <strong>@o.Tit</strong>
+                    </span>
+                </button>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ============================ CTA ============================ -->
+<section class="section cta">
+    <div class="cta-media">
+        <img src="~/images/gamasp/textura-concreto-w.jpg" alt="" aria-hidden="true" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="cta-inner">
+            <div class="reveal">
+                <span class="eyebrow">A próxima pode ser a sua</span>
+                <h2>Vamos tirar o seu projeto do papel?</h2>
+                <p>Mande fotos, plantas ou apenas a ideia. Avaliamos e retornamos com uma proposta clara.</p>
+            </div>
+            <div class="cta-actions reveal" data-d="2">
+                <a class="btn btn--lg" href="@wa" target="_blank" rel="noopener">
+                    Enviar pelo WhatsApp
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a class="btn btn--ghost btn--lg" href="@Url.Action("FaleConosco", "Home")">
+                    Formulário de contato
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Visualização da obra">
+    <button class="lb-btn lb-close" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12" /></svg></button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6" /></svg></button>
+    <button class="lb-btn lb-next" type="button" aria-label="Próxima"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6" /></svg></button>
+    <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+    </figure>
+</div>

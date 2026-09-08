@@ -1,0 +1,665 @@
+﻿@{
+    ViewBag.Title = null;
+    ViewBag.Descricao = "Gama SP Engenharia: regularização de imóveis, gerenciamento de obras, projetos aprovados em prefeitura, AVCB, SPDA, NRs e retrofit de fachadas em São Paulo. Responsável técnico com CREA. Orçamento pelo WhatsApp.";
+    var wa = "https://api.whatsapp.com/send?phone=5511947430418&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Gama%20SP%20Engenharia%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
+}
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+    <div class="hero-media">
+        <img src="~/images/gamasp/hero-obra-xl.jpg"
+             srcset="@Url.Content("~/images/gamasp/hero-obra-w.jpg") 1600w, @Url.Content("~/images/gamasp/hero-obra-xl.jpg") 2400w, @Url.Content("~/images/gamasp/hero-obra.jpg") 5504w"
+             sizes="100vw"
+             alt="Edifício em construção em São Paulo ao pôr do sol" fetchpriority="high" />
+    </div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="shell">
+        <div class="hero-inner">
+            <span class="hero-badge reveal"><b>✓</b> Responsável técnico com CREA ativo</span>
+
+            <h1 class="reveal" data-d="1">
+                Engenharia que <em>entrega</em>.<br />
+                Do projeto ao Habite-se.
+            </h1>
+
+            <p class="hero-sub reveal" data-d="2">
+                Há mais de uma década resolvendo o que trava a sua obra em São Paulo: regularização,
+                aprovação em prefeitura, gestão de canteiro, laudos e segurança. Prazo combinado é prazo cumprido.
+            </p>
+
+            <div class="hero-actions reveal" data-d="3">
+                <a class="btn btn--lg" href="@wa" target="_blank" rel="noopener">
+                    Solicitar orçamento agora
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a class="btn btn--ghost btn--lg" href="@Url.Action("Servicos", "Home")">
+                    Ver todos os serviços
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <div class="hero-trust reveal" data-d="4">
+                <div><strong><i>+</i><span data-count="12">0</span></strong> anos de atuação</div>
+                <div><strong><span data-count="480">0</span><i>+</i></strong> processos e obras</div>
+                <div><strong><span data-count="8">0</span></strong> frentes de serviço</div>
+                <div><strong>CREA</strong> 2223278</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#sobre" class="hero-scroll" aria-label="Rolar para o conteúdo">
+        <span>Role</span>
+        <i></i>
+    </a>
+</section>
+
+<!-- ==================== Faixa de credenciais ==================== -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+        <div class="marquee-group">
+            <span>Regularização de Imóveis</span>
+            <span>Usucapião</span>
+            <span>Habite-se</span>
+            <span>AVCB / PPCI</span>
+            <span>SPDA · NBR 5419</span>
+            <span>Gerenciamento de Obras</span>
+            <span>Laudos e Perícias</span>
+            <span>Retrofit de Fachadas</span>
+            <span>NR-10 · NR-12 · NR-18 · NR-35</span>
+        </div>
+        <div class="marquee-group">
+            <span>Regularização de Imóveis</span>
+            <span>Usucapião</span>
+            <span>Habite-se</span>
+            <span>AVCB / PPCI</span>
+            <span>SPDA · NBR 5419</span>
+            <span>Gerenciamento de Obras</span>
+            <span>Laudos e Perícias</span>
+            <span>Retrofit de Fachadas</span>
+            <span>NR-10 · NR-12 · NR-18 · NR-35</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================ SOBRE ============================ -->
+<section class="section section--paper section--tex" id="sobre">
+    <div class="section-bg section-bg--paper" aria-hidden="true" data-parallax="26">
+        <img src="~/images/gamasp/bg-plaster-w.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="section-head reveal" style="max-width:640px;">
+            <span class="eyebrow">A Empresa</span>
+            <h2>Engenharia séria, do primeiro desenho à última vistoria.</h2>
+            <p>
+                A <strong>Gama SP Engenharia</strong> resolve o que costuma travar uma construção:
+                prazo, documentação e conformidade. Passe pelas etapas ao lado e veja como trabalhamos.
+            </p>
+        </div>
+
+        <div class="painel reveal" role="group" aria-label="A Gama SP Engenharia, etapa por etapa">
+            <div class="painel-palco">
+                    <div class="painel-foto is-on">
+                        <img src="~/images/gamasp/vitrine-responsavel-w.jpg"
+                                 srcset="@Url.Content("~/images/gamasp/vitrine-responsavel-w.jpg") 1600w, @Url.Content("~/images/gamasp/vitrine-responsavel-xl.jpg") 2400w"
+                                 sizes="100vw"
+                                 alt="Um engenheiro no comando, do começo ao fim" fetchpriority="high"  />
+                    </div>
+                    <div class="painel-foto">
+                        <img src="~/images/gamasp/vitrine-projeto-w.jpg"
+                                 srcset="@Url.Content("~/images/gamasp/vitrine-projeto-w.jpg") 1600w, @Url.Content("~/images/gamasp/vitrine-projeto-xl.jpg") 2400w"
+                                 sizes="100vw"
+                                 alt="O papel resolvido antes de a obra começar" loading="lazy"  />
+                    </div>
+                    <div class="painel-foto">
+                        <img src="~/images/gamasp/vitrine-obra-w.jpg"
+                                 srcset="@Url.Content("~/images/gamasp/vitrine-obra-w.jpg") 1600w, @Url.Content("~/images/gamasp/vitrine-obra-xl.jpg") 2400w"
+                                 sizes="100vw"
+                                 alt="Cronograma que se cumpre, orçamento que se respeita" loading="lazy"  />
+                    </div>
+                    <div class="painel-foto">
+                        <img src="~/images/gamasp/vitrine-vistoria-w.jpg"
+                                 srcset="@Url.Content("~/images/gamasp/vitrine-vistoria-w.jpg") 1600w, @Url.Content("~/images/gamasp/vitrine-vistoria-xl.jpg") 2400w"
+                                 sizes="100vw"
+                                 alt="Conferido etapa por etapa, não só no final" loading="lazy"  />
+                    </div>
+                    <div class="painel-foto">
+                        <img src="~/images/gamasp/vitrine-entrega-w.jpg"
+                                 srcset="@Url.Content("~/images/gamasp/vitrine-entrega-w.jpg") 1600w, @Url.Content("~/images/gamasp/vitrine-entrega-xl.jpg") 2400w"
+                                 sizes="100vw"
+                                 alt="Chaves na mão e documentação em dia" loading="lazy"  />
+                    </div>
+                <div class="painel-veu" aria-hidden="true"></div>
+
+                <div class="painel-selo">
+                    <strong>+<span data-count="12">0</span></strong>
+                    <span>anos de obra</span>
+                </div>
+
+                <div class="painel-texto">
+                        <div class="painel-slide is-on" role="tabpanel">
+                            <span class="eyebrow">Responsável técnico</span>
+                            <h3>Um engenheiro no comando, do começo ao fim</h3>
+                            <p>Todo contrato tem responsável técnico com CREA ativo e ART emitida. Quem assina o projeto é quem acompanha a obra — você fala sempre com a mesma pessoa.</p>
+                            <ul class="ticks">
+                                <li>Eng. Cícero Gama — CREA 5070392074</li>
+                                <li>ART emitida em todos os serviços</li>
+                                <li>Visita técnica antes de qualquer proposta</li>
+                            </ul>
+                        </div>
+                        <div class="painel-slide" role="tabpanel">
+                            <span class="eyebrow">Projeto e aprovação</span>
+                            <h3>O papel resolvido antes de a obra começar</h3>
+                            <p>Arquitetônico, estrutural, elétrico, hidráulico e preventivo. Levamos o processo até a aprovação na prefeitura e cuidamos das exigências que aparecem no caminho.</p>
+                            <ul class="ticks">
+                                <li>Projetos completos e complementares</li>
+                                <li>Aprovação em prefeitura acompanhada</li>
+                                <li>Regularização: CNO, SERO e Habite-se</li>
+                            </ul>
+                        </div>
+                        <div class="painel-slide" role="tabpanel">
+                            <span class="eyebrow">Execução</span>
+                            <h3>Cronograma que se cumpre, orçamento que se respeita</h3>
+                            <p>Gestão de equipe, materiais e prazos com relatório periódico. Você sabe onde está a obra e quanto já foi gasto, sem precisar perguntar.</p>
+                            <ul class="ticks">
+                                <li>Cronograma físico-financeiro por escrito</li>
+                                <li>Relatórios periódicos de andamento</li>
+                                <li>Canteiro dentro da NR-18</li>
+                            </ul>
+                        </div>
+                        <div class="painel-slide" role="tabpanel">
+                            <span class="eyebrow">Vistoria e conformidade</span>
+                            <h3>Conferido etapa por etapa, não só no final</h3>
+                            <p>Cada fase é medida e verificada antes de a seguinte começar. É assim que erro caro vira ajuste barato — e que a vistoria dos órgãos não traz surpresa.</p>
+                            <ul class="ticks">
+                                <li>Medição e conferência a cada etapa</li>
+                                <li>Laudos, avaliações e perícias</li>
+                                <li>Acompanhamento em vistorias e AVCB</li>
+                            </ul>
+                        </div>
+                        <div class="painel-slide" role="tabpanel">
+                            <span class="eyebrow">Entrega</span>
+                            <h3>Chaves na mão e documentação em dia</h3>
+                            <p>A obra só termina quando o papel também termina. Você recebe o imóvel pronto e regularizado, com tudo que precisa para usar, vender ou financiar.</p>
+                            <ul class="ticks">
+                                <li>Habite-se e Auto de Regularização</li>
+                                <li>Documentação completa entregue</li>
+                                <li>Suporte técnico após a entrega</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div class="painel-minis" role="tablist" aria-label="Escolher etapa">
+                    <button class="mini is-on" type="button" role="tab"
+                            aria-selected="true" tabindex="0"
+                            aria-label="Responsável técnico">
+                        <img src="~/images/gamasp/vitrine-responsavel-m.jpg" alt="" loading="lazy" />
+                    </button>
+                    <button class="mini" type="button" role="tab"
+                            aria-selected="false" tabindex="-1"
+                            aria-label="Projeto e aprovação">
+                        <img src="~/images/gamasp/vitrine-projeto-m.jpg" alt="" loading="lazy" />
+                    </button>
+                    <button class="mini" type="button" role="tab"
+                            aria-selected="false" tabindex="-1"
+                            aria-label="Execução">
+                        <img src="~/images/gamasp/vitrine-obra-m.jpg" alt="" loading="lazy" />
+                    </button>
+                    <button class="mini" type="button" role="tab"
+                            aria-selected="false" tabindex="-1"
+                            aria-label="Vistoria e conformidade">
+                        <img src="~/images/gamasp/vitrine-vistoria-m.jpg" alt="" loading="lazy" />
+                    </button>
+                    <button class="mini" type="button" role="tab"
+                            aria-selected="false" tabindex="-1"
+                            aria-label="Entrega">
+                        <img src="~/images/gamasp/vitrine-entrega-m.jpg" alt="" loading="lazy" />
+                    </button>
+                </div>
+
+                <div class="painel-barra" aria-hidden="true"><i></i></div>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top:34px;">
+            <a class="link-u" href="@Url.Action("Servicos", "Home")">
+                <span>Conheça nossos serviços</span> <span>&#8594;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ SERVIÇOS ============================ -->
+<section class="section section--ivory section--tex" id="servicos">
+    <div class="section-bg section-bg--ivory" aria-hidden="true" data-parallax="30">
+        <img src="~/images/gamasp/bg-blueprint-w.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="section-head section-head--center reveal">
+            <span class="eyebrow">O que fazemos</span>
+            <h2>Oito frentes de engenharia sob um único responsável técnico</h2>
+            <p>Da regularização de um imóvel antigo ao gerenciamento completo de uma obra nova. Clique em um serviço para ver o escopo detalhado.</p>
+        </div>
+
+        <div class="grid-services">
+            @{
+                var servicos = new[] {
+                    new { Id = "regularizacao", Num = "01", Img = "svc-regularizacao", Titulo = "Regularização de Imóveis e Usucapião",
+                          Resumo = "Levantamento topográfico, projeto de regularização, laudos e toda a documentação junto à prefeitura — com apoio jurídico especializado." },
+                    new { Id = "terreno", Num = "02", Img = "svc-terreno", Titulo = "Terreno e Construção da Casa Própria",
+                          Resumo = "Da escolha do terreno ao Habite-se: projeto personalizado, planejamento, execução com mão de obra qualificada e regularização final." },
+                    new { Id = "nrs", Num = "03", Img = "svc-nr", Titulo = "Consultoria e Treinamento em NRs",
+                          Resumo = "Adequação às Normas Regulamentadoras, treinamentos NR-10, NR-12 e NR-35, elaboração de PPRA, PCMSO e LTCAT, inspeções técnicas." },
+                    new { Id = "avcb", Num = "04", Img = "svc-avcb", Titulo = "AVCB e Prevenção de Incêndio",
+                          Resumo = "Projeto preventivo (PPCI), adequações às normas do Corpo de Bombeiros e acompanhamento até a emissão do Auto de Vistoria." },
+                    new { Id = "projetos", Num = "05", Img = "svc-projetos", Titulo = "Projetos Arquitetônicos e Complementares",
+                          Resumo = "Arquitetônico, estrutural, elétrico, hidráulico e prevenção. Aprovação em prefeitura com acompanhamento técnico de ponta a ponta." },
+                    new { Id = "gerenciamento", Num = "06", Img = "svc-gerenciamento", Titulo = "Gerenciamento de Obras",
+                          Resumo = "Gestão de equipes, materiais e cronograma, controle de orçamento e qualidade, supervisão técnica e conformidade legal." },
+                    new { Id = "fachadas", Num = "07", Img = "svc-fachadas", Titulo = "Pintura, Limpeza e Retrofit de Fachadas",
+                          Resumo = "Hidrojateamento, tratamento de trincas e infiltrações, impermeabilização, restauração e revitalização estética de edifícios." },
+                    new { Id = "spda", Num = "08", Img = "svc-spda", Titulo = "SPDA — Proteção contra Descargas",
+                          Resumo = "Análise de risco pela NBR 5419, projeto executivo, instalação, laudo técnico e manutenção do sistema de para-raios." }
+                };
+            }
+
+            @foreach (var s in servicos)
+            {
+                <a class="svc rise3d reveal" href="@Url.Action("Servicos", "Home")#@s.Id">
+                    <div class="svc-media">
+                        <span class="svc-num">@s.Num</span>
+                        <img src="~/images/gamasp/@(s.Img)-w.jpg" alt="@s.Titulo" loading="lazy" />
+                    </div>
+                    <div class="svc-body">
+                        <h3>@s.Titulo</h3>
+                        <p>@s.Resumo</p>
+                        <span class="svc-more">Ver escopo <i>→</i></span>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ============================ NÚMEROS ============================ -->
+<section class="section section--ivory" style="padding-top:0;">
+    <div class="shell">
+        <div class="stats reveal">
+            <div class="stat rise3d">
+                <b><i>+</i><span data-count="12">0</span></b>
+                <span>Anos de atuação</span>
+            </div>
+            <div class="stat rise3d">
+                <b><span data-count="480">0</span><i>+</i></b>
+                <span>Obras e processos</span>
+            </div>
+            <div class="stat rise3d">
+                <b><span data-count="100">0</span><i>%</i></b>
+                <span>Com ART emitida</span>
+            </div>
+            <div class="stat rise3d">
+                <b><span data-count="24">0</span><i>h</i></b>
+                <span>Retorno ao orçamento</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ CAMADAS 3D ============================ -->
+<section class="section section--dark section--tex" id="camadas">
+    <div class="section-bg section-bg--dark" aria-hidden="true" data-parallax="22">
+        <img src="~/images/gamasp/bg-concreto-escuro-w.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="section-head section-head--center reveal">
+            <span class="eyebrow">Da base ao acabamento</span>
+            <h2>Sua obra, camada por camada</h2>
+            <p>Passe o cursor pelas etapas e veja a construção se montar. Cada camada tem responsável técnico, ART e verificação antes da próxima começar.</p>
+        </div>
+
+        <div class="layers-wrap">
+            <!-- Palco 3D -->
+            <div class="layers-stage reveal" aria-hidden="true">
+                <div class="layers">
+                    <div class="layer layer--grid">
+                        <span class="layer-tag">01 · Terreno</span>
+                    </div>
+                    <div class="layer">
+                        <span class="layer-tag">02 · Fundação</span>
+                        <i class="layer-solid" style="left:14%;top:20%;width:16%;height:9%;"></i>
+                        <i class="layer-solid" style="left:44%;top:20%;width:16%;height:9%;"></i>
+                        <i class="layer-solid" style="left:72%;top:20%;width:14%;height:9%;"></i>
+                        <i class="layer-solid" style="left:14%;top:66%;width:16%;height:9%;"></i>
+                        <i class="layer-solid" style="left:44%;top:66%;width:16%;height:9%;"></i>
+                        <i class="layer-solid" style="left:72%;top:66%;width:14%;height:9%;"></i>
+                    </div>
+                    <div class="layer">
+                        <span class="layer-tag">03 · Estrutura</span>
+                        <i class="layer-solid" style="left:14%;top:20%;width:8%;height:56%;opacity:.55;"></i>
+                        <i class="layer-solid" style="left:46%;top:20%;width:8%;height:56%;opacity:.55;"></i>
+                        <i class="layer-solid" style="left:78%;top:20%;width:8%;height:56%;opacity:.55;"></i>
+                        <i class="layer-solid" style="left:14%;top:20%;width:72%;height:7%;"></i>
+                    </div>
+                    <div class="layer">
+                        <span class="layer-tag">04 · Acabamento</span>
+                        <i class="layer-solid" style="left:12%;top:18%;width:76%;height:62%;opacity:.4;border-radius:8px;"></i>
+                    </div>
+                    <div class="layer">
+                        <span class="layer-tag">05 · Entrega</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legenda interativa -->
+            <div class="layers-legend reveal" data-d="2">
+                <button type="button">
+                    <b>01</b>
+                    <span>
+                        <strong>Terreno e diagnóstico</strong>
+                        <span>Levantamento topográfico, análise documental e viabilidade legal.</span>
+                    </span>
+                </button>
+                <button type="button">
+                    <b>02</b>
+                    <span>
+                        <strong>Fundação</strong>
+                        <span>Sondagem, projeto de fundação e execução com controle tecnológico.</span>
+                    </span>
+                </button>
+                <button type="button">
+                    <b>03</b>
+                    <span>
+                        <strong>Estrutura</strong>
+                        <span>Pilares, vigas e lajes conforme projeto estrutural, com ART emitida.</span>
+                    </span>
+                </button>
+                <button type="button">
+                    <b>04</b>
+                    <span>
+                        <strong>Acabamento</strong>
+                        <span>Instalações, vedação, revestimentos e fachada com inspeção por etapa.</span>
+                    </span>
+                </button>
+                <button type="button">
+                    <b>05</b>
+                    <span>
+                        <strong>Entrega e regularização</strong>
+                        <span>Vistoria final, Habite-se, AVCB e documentação em suas mãos.</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ PROCESSO ============================ -->
+<section class="section section--graphite section--tex">
+    <div class="section-bg section-bg--dark" aria-hidden="true" data-parallax="34">
+        <img src="~/images/gamasp/bg-concreto-escuro-w.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="section-head reveal">
+            <span class="eyebrow">Como trabalhamos</span>
+            <h2>Um método simples, sem surpresa no meio do caminho</h2>
+        </div>
+
+        <div class="steps">
+            <div class="step reveal" data-d="1">
+                <b>ETAPA 01</b>
+                <h3>Diagnóstico</h3>
+                <p>Visita técnica, análise da edificação e dos documentos, identificação de irregularidades frente ao Código de Obras e à Lei de Zoneamento.</p>
+            </div>
+            <div class="step reveal" data-d="2">
+                <b>ETAPA 02</b>
+                <h3>Proposta</h3>
+                <p>Escopo, orçamento aberto e cronograma físico-financeiro por escrito. Você sabe exatamente o que será feito, quando e por quanto.</p>
+            </div>
+            <div class="step reveal" data-d="3">
+                <b>ETAPA 03</b>
+                <h3>Execução</h3>
+                <p>Projeto, obra ou processo tocado por equipe própria, com ART emitida, controle de qualidade e relatórios periódicos de andamento.</p>
+            </div>
+            <div class="step reveal" data-d="4">
+                <b>ETAPA 04</b>
+                <h3>Entrega</h3>
+                <p>Vistoria final, documentação regularizada em mãos — Habite-se, AVCB, Auto de Regularização — e suporte pós-entrega.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== VITRINE COM PARALLAX ==================== -->
+<section class="showcase">
+    <div class="showcase-media" data-parallax="70" aria-hidden="true">
+        <img src="~/images/gamasp/showcase-atrio-w.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="showcase-inner" data-parallax="-26" data-parallax-prop="--pyc">
+        <span class="eyebrow">Padrão de entrega</span>
+        <h2>Detalhe é o que separa uma obra boa de uma obra bem-feita</h2>
+        <p>
+            Prumo, esquadro, junta alinhada, documentação em dia. O acabamento que você vê
+            é consequência do rigor que você não vê — e é isso que entregamos em cada contrato.
+        </p>
+    </div>
+</section>
+
+<!-- ============================ OBRAS ============================ -->
+<section class="section section--paper">
+    <div class="shell">
+        <div class="section-head reveal">
+            <span class="eyebrow">Obras & Projetos</span>
+            <h2>Resultado que se vê de perto</h2>
+            <p>Uma amostra do que entregamos em residencial, comercial e industrial.</p>
+        </div>
+
+        <div class="grid-gallery">
+            <button class="tile tile--wide rise3d reveal" data-cat="residencial"
+                    data-full="@Url.Content("~/images/gamasp/galeria-condominio.jpg")"
+                    data-caption="Condomínio residencial — entrega final">
+                <img src="~/images/gamasp/galeria-condominio-w.jpg"
+                     srcset="@Url.Content("~/images/gamasp/galeria-condominio-w.jpg") 1600w, @Url.Content("~/images/gamasp/galeria-condominio-xl.jpg") 2400w"
+                     sizes="(min-width: 1100px) 42vw, 100vw"
+                     alt="Fachada de condomínio residencial entregue" loading="lazy" />
+                <span class="tile-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5M11 8v6M8 11h6" /></svg></span>
+                <span class="tile-caption"><em>Residencial</em><strong>Condomínio entregue — São Paulo</strong></span>
+            </button>
+
+            <button class="tile rise3d reveal" data-d="1" data-cat="reforma"
+                    data-full="@Url.Content("~/images/gamasp/galeria-cozinha.jpg")"
+                    data-caption="Reforma completa de cozinha">
+                <img src="~/images/gamasp/galeria-cozinha-w.jpg"
+                     srcset="@Url.Content("~/images/gamasp/galeria-cozinha-w.jpg") 1600w, @Url.Content("~/images/gamasp/galeria-cozinha-xl.jpg") 2400w"
+                     sizes="(min-width: 1100px) 42vw, 100vw"
+                     alt="Cozinha reformada em apartamento" loading="lazy" />
+                <span class="tile-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5M11 8v6M8 11h6" /></svg></span>
+                <span class="tile-caption"><em>Reforma</em><strong>Cozinha — reforma completa</strong></span>
+            </button>
+
+            <button class="tile rise3d reveal" data-d="2" data-cat="comercial"
+                    data-full="@Url.Content("~/images/gamasp/galeria-fachada-comercial.jpg")"
+                    data-caption="Retrofit de fachada comercial">
+                <img src="~/images/gamasp/galeria-fachada-comercial-w.jpg"
+                     srcset="@Url.Content("~/images/gamasp/galeria-fachada-comercial-w.jpg") 1600w, @Url.Content("~/images/gamasp/galeria-fachada-comercial-xl.jpg") 2400w"
+                     sizes="(min-width: 1100px) 42vw, 100vw"
+                     alt="Fachada comercial após retrofit" loading="lazy" />
+                <span class="tile-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5M11 8v6M8 11h6" /></svg></span>
+                <span class="tile-caption"><em>Comercial</em><strong>Retrofit de fachada</strong></span>
+            </button>
+
+            <button class="tile rise3d reveal" data-d="3" data-cat="industrial"
+                    data-full="@Url.Content("~/images/gamasp/galeria-galpao.jpg")"
+                    data-caption="Galpão industrial concluído">
+                <img src="~/images/gamasp/galeria-galpao-w.jpg"
+                     srcset="@Url.Content("~/images/gamasp/galeria-galpao-w.jpg") 1600w, @Url.Content("~/images/gamasp/galeria-galpao-xl.jpg") 2400w"
+                     sizes="(min-width: 1100px) 42vw, 100vw"
+                     alt="Galpão industrial concluído" loading="lazy" />
+                <span class="tile-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5M11 8v6M8 11h6" /></svg></span>
+                <span class="tile-caption"><em>Industrial</em><strong>Galpão — estrutura metálica</strong></span>
+            </button>
+        </div>
+
+        <div style="margin-top:38px;" class="reveal">
+            <a class="btn btn--outline btn--lg" href="@Url.Action("Galeria", "Home")">
+                Ver a galeria completa
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ DEPOIMENTOS ============================ -->
+<section class="section section--sand section--tex">
+    <div class="section-bg section-bg--sand" aria-hidden="true" data-parallax="24">
+        <img src="~/images/gamasp/bg-travertino-w.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="section-head section-head--center reveal">
+            <span class="eyebrow">Quem já contratou</span>
+            <h2>Confiança construída obra após obra</h2>
+        </div>
+
+        <div class="quotes">
+            <div class="quote reveal" data-d="1">
+                <div class="stars">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                </div>
+                <p>Meu imóvel estava irregular havia anos e ninguém resolvia. A Gama SP montou o processo, acompanhou na prefeitura e eu recebi o Auto de Regularização. Comunicação clara do começo ao fim.</p>
+                <div class="quote-by">
+                    <span class="quote-avatar">RM</span>
+                    <div><strong>Ricardo M.</strong><span>Proprietário — Zona Leste, SP</span></div>
+                </div>
+            </div>
+
+            <div class="quote reveal" data-d="2">
+                <div class="stars">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                </div>
+                <p>Contratamos o AVCB do condomínio. Levantaram tudo o que estava fora de norma, executaram as adequações e acompanharam a vistoria. Aprovado de primeira, dentro do prazo prometido.</p>
+                <div class="quote-by">
+                    <span class="quote-avatar">SF</span>
+                    <div><strong>Síndica Fernanda A.</strong><span>Condomínio residencial — Santo André</span></div>
+                </div>
+            </div>
+
+            <div class="quote reveal" data-d="3">
+                <div class="stars">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9L12 2Z" /></svg>
+                </div>
+                <p>Gerenciaram a obra do nosso galpão do início ao fim. Cronograma respeitado, canteiro organizado e segurança levada a sério. Já contratamos para a segunda etapa.</p>
+                <div class="quote-by">
+                    <span class="quote-avatar">JC</span>
+                    <div><strong>José Carlos T.</strong><span>Diretor industrial — Guarulhos</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section section--ivory section--tex" id="atendimento">
+    <div class="section-bg section-bg--ivory" aria-hidden="true" data-parallax="28">
+        <img src="~/images/gamasp/bg-mesa-projeto-w.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="split">
+            <div class="reveal">
+                <span class="eyebrow">Dúvidas frequentes</span>
+                <h2>Antes de pedir um orçamento</h2>
+                <p class="lead">Se a sua pergunta não estiver aqui, chame no WhatsApp — respondemos em até 24 horas úteis.</p>
+                <div style="margin-top:28px;">
+                    <a class="btn btn--lg" href="@wa" target="_blank" rel="noopener">
+                        Tirar dúvida no WhatsApp
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="faq reveal" data-d="2">
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        Vocês atendem em quais regiões?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a"><div>Atendemos a capital, o ABC, Guarulhos, Osasco e demais cidades da Grande São Paulo. Para obras no interior, avaliamos caso a caso — fale conosco.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        O orçamento tem custo?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a"><div>Não. A proposta comercial é gratuita e sem compromisso. Quando o serviço exige visita técnica com laudo, informamos o valor antes de qualquer deslocamento.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        Quanto tempo leva uma regularização?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a"><div>Depende da situação do imóvel e do prazo da prefeitura. Após o diagnóstico apresentamos uma estimativa realista de prazo e as etapas envolvidas — nunca prometemos data que não podemos cumprir.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        A obra tem responsável técnico e ART?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a"><div>Sempre. Todo contrato tem ART emitida e responsável técnico com CREA ativo — Eng. Cícero Gama, CREA 5070392074, engenheiro civil, de segurança do trabalho e de avaliações e perícias.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        Vocês acompanham a vistoria dos órgãos?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a"><div>Sim. Acompanhamos vistorias do Corpo de Bombeiros, da prefeitura e demais órgãos, e respondemos às exigências técnicas até a emissão do documento final.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ CTA ============================ -->
+<section class="section cta">
+    <div class="cta-media">
+        <img src="~/images/gamasp/obra-aerea-w.jpg" alt="" aria-hidden="true" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="cta-inner">
+            <div class="reveal">
+                <span class="eyebrow">Vamos conversar</span>
+                <h2>Conte o seu projeto. Retornamos em até 24 horas.</h2>
+                <p>Mande uma mensagem com o que você precisa — regularizar, construir, reformar ou adequar. Um engenheiro responde, não um robô.</p>
+            </div>
+            <div class="cta-actions reveal" data-d="2">
+                <a class="btn btn--lg" href="@wa" target="_blank" rel="noopener">
+                    Chamar no WhatsApp
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a class="btn btn--ghost btn--lg" href="@Url.Action("FaleConosco", "Home")">
+                    Enviar mensagem
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox da galeria -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Visualização da obra">
+    <button class="lb-btn lb-close" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12" /></svg></button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6" /></svg></button>
+    <button class="lb-btn lb-next" type="button" aria-label="Próxima"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6" /></svg></button>
+    <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+    </figure>
+</div>

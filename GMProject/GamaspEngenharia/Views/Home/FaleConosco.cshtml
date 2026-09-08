@@ -1,0 +1,210 @@
+﻿@{
+    ViewBag.Title = "Fale Conosco";
+    ViewBag.Descricao = "Fale com a Gama SP Engenharia: WhatsApp (11) 94743-0418, comercial@gamaspengenharia.com.br. Orçamento gratuito e sem compromisso.";
+    var wa = "https://api.whatsapp.com/send?phone=5511947430418&text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
+}
+
+<!-- ============================ CABEÇALHO ============================ -->
+<section class="page-hero">
+    <div class="page-hero-media">
+        <img src="~/images/gamasp/parceria-w.jpg" alt="" aria-hidden="true" />
+    </div>
+    <div class="shell">
+        <nav class="crumbs reveal" aria-label="Você está aqui">
+            <a href="@Url.Action("Index", "Home")">Início</a>
+            <span>/</span>
+            <span>Contato</span>
+        </nav>
+        <h1 class="reveal" data-d="1">Fale com um engenheiro</h1>
+        <p class="reveal" data-d="2">
+            Sem call center e sem robô. Conte o que você precisa e retornamos em até 24 horas úteis
+            com uma orientação técnica — o orçamento é gratuito.
+        </p>
+    </div>
+</section>
+
+<!-- ============================ CONTATO ============================ -->
+<section class="section section--dark">
+    <div class="shell">
+        <div class="split">
+            <div class="reveal">
+                <span class="eyebrow">Canais de atendimento</span>
+                <h2>O jeito mais rápido é o WhatsApp</h2>
+                <p class="lead" style="margin-bottom:32px;">
+                    Atendemos a capital e a Grande São Paulo, de segunda a sexta, das 8h às 17h.
+                </p>
+
+                <div class="contact-cards">
+                    <a class="contact-card" href="@wa" target="_blank" rel="noopener">
+                        <span class="contact-ico">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6a11.4 11.4 0 0 1-4.4-3.9c-.3-.5-.8-1.3-.8-2.5s.6-1.8.9-2c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.2.1.4.1.6-.1l.8-1c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.2Z" /></svg>
+                        </span>
+                        <span>
+                            <em>WhatsApp — resposta mais rápida</em>
+                            <strong>(11) 94743-0418</strong>
+                            <small>Clique para abrir a conversa</small>
+                        </span>
+                    </a>
+
+                    <a class="contact-card" href="mailto:comercial@gamaspengenharia.com.br">
+                        <span class="contact-ico">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m2 7 10 6 10-6" /></svg>
+                        </span>
+                        <span>
+                            <em>E-mail comercial</em>
+                            <strong>comercial@gamaspengenharia.com.br</strong>
+                            <small>Ideal para enviar plantas e documentos</small>
+                        </span>
+                    </a>
+
+                    <a class="contact-card" href="tel:+5511947430418">
+                        <span class="contact-ico">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" /></svg>
+                        </span>
+                        <span>
+                            <em>Telefone</em>
+                            <strong>(11) 94743-0418</strong>
+                            <small>Seg. a Sex., 8h às 17h</small>
+                        </span>
+                    </a>
+
+                    <a class="contact-card" href="https://www.facebook.com/gamasp.engenharia" target="_blank" rel="noopener">
+                        <span class="contact-ico">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1Z" /></svg>
+                        </span>
+                        <span>
+                            <em>Redes sociais</em>
+                            <strong>&#64;gamasp.engenharia</strong>
+                            <small>Acompanhe as obras no Facebook</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div style="margin-top:38px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12);">
+                    <span class="eyebrow" style="margin-bottom:14px;">Responsável técnico</span>
+                    <div class="footer-creds">
+                        <div><b>Engenheiro:</b> <span>Cícero Gama — CREA 5070392074</span></div>
+                        <div><b>CREA empresa:</b> <span>2223278</span></div>
+                        <div><b>CNPJ:</b> <span>12.737.657/0001-15</span></div>
+                        <div><b>Titulação:</b> <span>Eng. Civil · Eng. de Segurança do Trabalho · Eng. de Avaliações e Perícias</span></div>
+                        <div><b>Ordem dos Eng. de Portugal:</b> <span>Região Sul nº 92650</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário -->
+            <div class="reveal" data-d="2">
+                <div class="form-card">
+                    <span class="eyebrow">Envie sua mensagem</span>
+                    <h3 style="margin-bottom:8px;">Solicite um orçamento</h3>
+                    <p style="color:var(--slate);font-size:.95rem;margin-bottom:28px;">
+                        Preencha os campos abaixo. Quanto mais detalhes, mais precisa será a nossa resposta.
+                    </p>
+
+                    <form id="form-contato" action="@Url.Action("EnviaEmail", "Home")" method="post" novalidate>
+                        @Html.AntiForgeryToken()
+
+                        <div class="field">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" required autocomplete="name"
+                                   data-mask="nome" data-regra="nome" maxlength="80"
+                                   placeholder="Nome e sobrenome" />
+                            <small class="field-erro"></small>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required autocomplete="email"
+                                       data-mask="email" data-regra="email" maxlength="120"
+                                       inputmode="email" spellcheck="false"
+                                       placeholder="seu&#64;email.com.br" />
+                                <small class="field-erro"></small>
+                            </div>
+                            <div class="field">
+                                <label for="telefone">Telefone / WhatsApp</label>
+                                <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                                       data-mask="telefone" data-regra="telefone"
+                                       inputmode="numeric" maxlength="15"
+                                       placeholder="(11) 90000-0000" />
+                                <small class="field-erro"></small>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="servico">Serviço de interesse</label>
+                            <select id="servico" name="servico">
+                                <option value="">Selecione uma opção</option>
+                                <option>Regularização de imóveis / Usucapião</option>
+                                <option>Terreno e construção</option>
+                                <option>Consultoria e treinamento em NRs</option>
+                                <option>AVCB / Prevenção de incêndio</option>
+                                <option>Projetos e aprovação em prefeitura</option>
+                                <option>Gerenciamento de obras</option>
+                                <option>Pintura e retrofit de fachadas</option>
+                                <option>SPDA / Para-raios</option>
+                                <option>Laudos, avaliações e perícias</option>
+                                <option>Outro assunto</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="mensagem">Conte sobre o seu projeto *</label>
+                            <textarea id="mensagem" name="mensagem" required
+                                      data-regra="mensagem" data-min="15" maxlength="1500"
+                                      placeholder="Descreva o imóvel, o endereço aproximado, o que precisa ser feito e o prazo desejado."></textarea>
+                            <div class="field-conta" data-conta>0 / 1500</div>
+                            <small class="field-erro"></small>
+                        </div>
+
+                        <button class="btn btn--dark btn--lg btn--block" type="submit">
+                            <span class="btn-label">Enviar mensagem</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+
+                        <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+
+                        <p class="form-note">
+                            Seus dados são usados apenas para responder a este contato. Prefere falar agora?
+                            <a href="@wa" target="_blank" rel="noopener" style="color:var(--amber-deep);font-weight:600;">Chame no WhatsApp</a>.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ ÁREA DE ATUAÇÃO ============================ -->
+<section class="section section--ivory">
+    <div class="shell">
+        <div class="section-head section-head--center reveal">
+            <span class="eyebrow">Onde atendemos</span>
+            <h2>Capital e Grande São Paulo</h2>
+            <p>Para obras no interior do estado, avaliamos caso a caso — entre em contato e conversamos.</p>
+        </div>
+
+        <div class="steps" style="border-top:0;">
+            <div class="step reveal" data-d="1" style="border-top-color:rgba(0,0,0,.12);">
+                <b>REGIÃO 01</b>
+                <h3>Capital</h3>
+                <p style="color:var(--slate);">Zonas Norte, Sul, Leste, Oeste e Centro de São Paulo.</p>
+            </div>
+            <div class="step reveal" data-d="2" style="border-top-color:rgba(0,0,0,.12);">
+                <b>REGIÃO 02</b>
+                <h3>Grande ABC</h3>
+                <p style="color:var(--slate);">Santo André, São Bernardo, São Caetano, Diadema e Mauá.</p>
+            </div>
+            <div class="step reveal" data-d="3" style="border-top-color:rgba(0,0,0,.12);">
+                <b>REGIÃO 03</b>
+                <h3>Guarulhos e Alto Tietê</h3>
+                <p style="color:var(--slate);">Guarulhos, Mogi das Cruzes, Suzano e região.</p>
+            </div>
+            <div class="step reveal" data-d="4" style="border-top-color:rgba(0,0,0,.12);">
+                <b>REGIÃO 04</b>
+                <h3>Oeste metropolitano</h3>
+                <p style="color:var(--slate);">Osasco, Barueri, Carapicuíba, Cotia e Itapevi.</p>
+            </div>
+        </div>
+    </div>
+</section>

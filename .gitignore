@@ -1,0 +1,17 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+packages/*
+!packages/repositories.config
+
+# Registros de contato gravados pelo formulario (dados de clientes)
+App_Data/

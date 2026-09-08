@@ -1,0 +1,258 @@
+﻿@{
+    ViewBag.Title = "Serviços de Engenharia";
+    ViewBag.Descricao = "Regularização de imóveis, usucapião, gerenciamento de obras, projetos e aprovações, AVCB, SPDA, treinamentos em NRs e retrofit de fachadas em São Paulo.";
+    var wa = "https://api.whatsapp.com/send?phone=5511947430418&text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20servi%C3%A7o.";
+}
+
+<!-- ============================ CABEÇALHO ============================ -->
+<section class="page-hero">
+    <div class="page-hero-media">
+        <img src="~/images/gamasp/torres-blue-hour-w.jpg" alt="" aria-hidden="true" />
+    </div>
+    <div class="shell">
+        <nav class="crumbs reveal" aria-label="Você está aqui">
+            <a href="@Url.Action("Index", "Home")">Início</a>
+            <span>/</span>
+            <span>Serviços</span>
+        </nav>
+        <h1 class="reveal" data-d="1">Serviços de engenharia</h1>
+        <p class="reveal" data-d="2">
+            Oito frentes de atuação, um único responsável técnico. Escolha o serviço abaixo
+            e veja exatamente o que está incluído no escopo.
+        </p>
+    </div>
+</section>
+
+@{
+    var lista = new[] {
+        new {
+            Id = "regularizacao", Num = "01", Img = "svc-regularizacao",
+            Titulo = "Regularização de Imóveis e Usucapião",
+            Chamada = "Precisa regularizar seu imóvel por usucapião? Conte com uma equipe técnica e jurídica que entende do assunto.",
+            Oferecemos = new[] {
+                "Levantamento topográfico e mapas detalhados.",
+                "Projetos técnicos para regularização junto às prefeituras.",
+                "Laudos técnicos, pareceres e avaliações judiciais.",
+                "Documentação completa para processos de usucapião.",
+                "Acompanhamento técnico em todas as etapas do processo.",
+                "Regularização documental: CNO, SERO e Habite-se."
+            },
+            PorQue = new[] {
+                "Trabalhamos ao lado de advogados especialistas em usucapião.",
+                "Soluções personalizadas para cada tipo de processo na parte jurídica.",
+                "Total transparência e eficiência do diagnóstico à entrega."
+            },
+            Fecho = "Tornando a sua regularização mais fácil e eficiente."
+        },
+        new {
+            Id = "terreno", Num = "02", Img = "svc-terreno",
+            Titulo = "Terreno e Construção: o caminho para a casa própria",
+            Chamada = "Realize o sonho da casa própria com um time que cuida de tudo, do início ao fim.",
+            Oferecemos = new[] {
+                "Apoio na escolha do terreno ideal.",
+                "Projeto arquitetônico personalizado.",
+                "Planejamento completo da obra e cronograma físico-financeiro.",
+                "Execução com materiais e mão de obra de qualidade.",
+                "Regularização documental: CNO, SERO e Habite-se."
+            },
+            PorQue = new[] {
+                "Experiência em transformar terrenos em lares.",
+                "Soluções sob medida para cada projeto e orçamento.",
+                "Acompanhamento técnico em todas as etapas."
+            },
+            Fecho = "Construindo a sua felicidade, do chão ao teto."
+        },
+        new {
+            Id = "nrs", Num = "03", Img = "svc-nr",
+            Titulo = "Consultoria e Treinamento em NRs",
+            Chamada = "Sua empresa em conformidade com as Normas Regulamentadoras — segurança em primeiro lugar.",
+            Oferecemos = new[] {
+                "Treinamentos práticos e teóricos em NRs: NR-10, NR-12, NR-35 e outras.",
+                "Consultoria para adequação às exigências legais.",
+                "Elaboração de PPRA, PCMSO, LTCAT e demais documentos.",
+                "Avaliações e inspeções técnicas.",
+                "Acompanhamento e suporte especializado."
+            },
+            PorQue = new[] {
+                "Redução de riscos e de acidentes no ambiente de trabalho.",
+                "Cumprimento das normas trabalhistas e legais.",
+                "Treinamentos personalizados para a sua equipe."
+            },
+            Fecho = "Construindo a sua segurança em primeiro lugar."
+        },
+        new {
+            Id = "avcb", Num = "04", Img = "svc-avcb",
+            Titulo = "AVCB — Auto de Vistoria do Corpo de Bombeiros",
+            Chamada = "O AVCB é o documento que comprova que o seu empreendimento atende às normas de segurança contra incêndio. Sem ele, há risco de multa e interdição.",
+            Oferecemos = new[] {
+                "Consultoria para adequação às normas de segurança.",
+                "Elaboração de projetos preventivos de incêndio (PPCI).",
+                "Acompanhamento durante inspeções e emissão de laudos.",
+                "Regularização de condomínios, comércios e indústrias."
+            },
+            PorQue = new[] {
+                "Garante a segurança de funcionários, clientes e moradores.",
+                "Evita multas e interdições do estabelecimento.",
+                "Assegura a regularização junto a parceiros e órgãos públicos."
+            },
+            Fecho = "Segurança e conformidade para o sucesso do seu negócio."
+        },
+        new {
+            Id = "projetos", Num = "05", Img = "svc-projetos",
+            Titulo = "Projetos Arquitetônicos, Complementares e Aprovações",
+            Chamada = "Do desenho à aprovação na prefeitura, com projetos completos e acompanhamento técnico.",
+            Oferecemos = new[] {
+                "Projetos arquitetônicos personalizados: espaços funcionais e modernos.",
+                "Regularização em prefeituras: documentação e aprovação conforme normas locais.",
+                "Projetos complementares: estrutural, elétrico, hidráulico e prevenção de incêndio.",
+                "Acompanhamento técnico em todas as etapas do processo."
+            },
+            PorQue = new[] {
+                "Agilidade na aprovação dos projetos.",
+                "Conformidade com as exigências legais e técnicas.",
+                "Soluções completas em engenharia e arquitetura."
+            },
+            Fecho = "Transformando ideias em realidade com excelência."
+        },
+        new {
+            Id = "gerenciamento", Num = "06", Img = "svc-gerenciamento",
+            Titulo = "Gerenciamento de Obras de Construção Civil",
+            Chamada = "Planejamento e execução sob controle: sua obra entregue no prazo, no orçamento e dentro da norma.",
+            Oferecemos = new[] {
+                "Gestão de recursos: coordenação de mão de obra, materiais e equipamentos.",
+                "Planejamento e controle de orçamentos, cronogramas e qualidade.",
+                "Identificação e resolução de problemas para evitar atrasos.",
+                "Supervisão técnica detalhada em todas as etapas da obra.",
+                "Garantia do cumprimento das normas regulamentadoras e leis vigentes."
+            },
+            PorQue = new[] {
+                "Obras entregues dentro do prazo e do orçamento.",
+                "Qualidade superior verificada em cada etapa.",
+                "Redução de riscos e maior segurança no canteiro."
+            },
+            Fecho = "Gerenciando as suas obras com excelência e confiança."
+        },
+        new {
+            Id = "fachadas", Num = "07", Img = "svc-fachadas",
+            Titulo = "Pintura, Limpeza e Retrofit de Fachadas",
+            Chamada = "Soluções completas para valorizar e proteger o seu edifício.",
+            Oferecemos = new[] {
+                "Lavagem com hidrojateamento: fachadas de vidro, pastilha cerâmica e pintura.",
+                "Tratamento e impermeabilização de trincas, fissuras e infiltrações.",
+                "Restauração e recomposição de tijolos aparentes, rebocos e pinturas especiais.",
+                "Retrofit e revitalização: acabamento e renovação estética.",
+                "Pintura interna e externa para todos os ambientes."
+            },
+            PorQue = new[] {
+                "Monitoramento técnico por engenheiro civil especializado.",
+                "Total atenção às normas de segurança do trabalho (NR-18).",
+                "Equipamentos adequados e equipe treinada para trabalho em altura.",
+                "Emissão de ART e projetos de execução.",
+                "Valorização patrimonial e proteção contra fissuras, infiltrações e oxidações."
+            },
+            Fecho = "Fachadas revitalizadas com segurança e excelência."
+        },
+        new {
+            Id = "spda", Num = "08", Img = "svc-spda",
+            Titulo = "SPDA — Proteção contra Descargas Atmosféricas",
+            Chamada = "Análise, projeto, instalação e manutenção do sistema de para-raios, conforme a NBR 5419:2015.",
+            Oferecemos = new[] {
+                "Análise de risco: estudo detalhado da estrutura com software especializado, definindo a necessidade e o nível de proteção.",
+                "Projeto SPDA: projeto executivo em planta e memorial descritivo, com dimensões e especificações do sistema.",
+                "Laudo técnico: inspeções periódicas por profissionais habilitados, avaliando funcionamento, eficiência e conformidade.",
+                "Instalação e manutenção seguindo rigorosamente as especificações do projeto."
+            },
+            PorQue = new[] {
+                "Engenheiros especialistas em risco de descargas atmosféricas.",
+                "Soluções personalizadas de análise, projeto, instalação e manutenção.",
+                "Cumprimento das normas técnicas vigentes.",
+                "Garantia de qualidade e segurança."
+            },
+            Fecho = "Proteção e segurança em cada etapa do seu SPDA."
+        }
+    };
+}
+
+<!-- ============================ LISTA DE SERVIÇOS ============================ -->
+@{ var alterna = false; }
+@foreach (var s in lista)
+{
+    alterna = !alterna;
+    <section class="section @(alterna ? "section--bone" : "section--paper")" id="@s.Id">
+        <div class="shell">
+            <div class="split split--imersivo @(alterna ? "" : "split--reverse")">
+                <div class="split-media reveal">
+                    <div class="frame-offset">
+                        <div class="frame">
+                            <img src="~/images/gamasp/@(s.Img)-w.jpg"
+                                 srcset="@Url.Content("~/images/gamasp/" + s.Img + "-w.jpg") 1600w, @Url.Content("~/images/gamasp/" + s.Img + "-xl.jpg") 2400w"
+                                 sizes="(min-width: 981px) 58vw, 100vw"
+                                 alt="@s.Titulo" loading="lazy" />
+                        </div>
+                        <div class="stat-badge">
+                            <strong>@s.Num</strong>
+                            <span>serviço</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" data-d="2">
+                    <span class="eyebrow">Serviço @s.Num</span>
+                    <h2>@s.Titulo</h2>
+                    <p class="lead">@s.Chamada</p>
+
+                    <h3 style="font-size:1.02rem;margin-top:32px;margin-bottom:4px;">O que está incluído</h3>
+                    <ul class="ticks">
+                        @foreach (var item in s.Oferecemos)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+
+                    <h3 style="font-size:1.02rem;margin-bottom:4px;">Por que contratar a Gama SP</h3>
+                    <ul class="ticks">
+                        @foreach (var item in s.PorQue)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+
+                    <p style="font-family:var(--font-display);font-weight:600;color:var(--amber-deep);margin-bottom:26px;">
+                        @s.Fecho
+                    </p>
+
+                    <a class="btn" href="@wa" target="_blank" rel="noopener">
+                        Pedir orçamento deste serviço
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- ============================ CTA ============================ -->
+<section class="section cta">
+    <div class="cta-media">
+        <img src="~/images/gamasp/parceria-w.jpg" alt="" aria-hidden="true" loading="lazy" />
+    </div>
+    <div class="shell">
+        <div class="cta-inner">
+            <div class="reveal">
+                <span class="eyebrow">Não encontrou o que precisa?</span>
+                <h2>Descreva a sua necessidade. A gente diz se é com a gente.</h2>
+                <p>Atuamos em engenharia civil, segurança do trabalho, avaliações e perícias. Se o serviço não for nosso, indicamos quem faz — com honestidade.</p>
+            </div>
+            <div class="cta-actions reveal" data-d="2">
+                <a class="btn btn--lg" href="@wa" target="_blank" rel="noopener">
+                    Chamar no WhatsApp
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a class="btn btn--ghost btn--lg" href="@Url.Action("FaleConosco", "Home")">
+                    Enviar mensagem
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
