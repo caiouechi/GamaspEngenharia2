@@ -1,4 +1,4 @@
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace GamaspEngenharia
@@ -18,7 +18,14 @@ namespace GamaspEngenharia
 
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            // O Let's Encrypt valida o dominio pedindo
+            // /.well-known/acme-challenge/<token>, que e uma URL sem
+            // extensao. Sem esta linha o MVC tenta rotear ".well-known"
+            // como controller e responde 404, e a emissao do certificado
+            // falha.
+            routes.IgnoreRoute(".well-known/{*pathInfo}");
 
             Fixar(routes.MapRoute(
                 name: "RegularizacaoRedirect",
