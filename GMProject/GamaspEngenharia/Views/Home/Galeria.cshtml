@@ -21,7 +21,9 @@
 <!-- ============================ CABEÇALHO ============================ -->
 <section class="page-hero">
     <div class="page-hero-media">
-        <img src="~/images/gamasp/obra-aerea-w.jpg" alt="" aria-hidden="true" />
+        <img src="~/images/gamasp/obra-aerea-w.jpg"
+             srcset="@Url.Content("~/images/gamasp/obra-aerea-w.jpg") 1600w, @Url.Content("~/images/gamasp/obra-aerea-xl.jpg") 2400w"
+             sizes="100vw" alt="" aria-hidden="true"  />
     </div>
     <div class="shell">
         <nav class="crumbs reveal" aria-label="Você está aqui">
@@ -78,7 +80,9 @@
 <!-- ============================ CTA ============================ -->
 <section class="section cta">
     <div class="cta-media">
-        <img src="~/images/gamasp/textura-concreto-w.jpg" alt="" aria-hidden="true" loading="lazy" />
+        <img src="~/images/gamasp/textura-concreto-w.jpg"
+             srcset="@Url.Content("~/images/gamasp/textura-concreto-w.jpg") 1600w, @Url.Content("~/images/gamasp/textura-concreto-xl.jpg") 2400w"
+             sizes="100vw" alt="" aria-hidden="true" loading="lazy"  />
     </div>
     <div class="shell">
         <div class="cta-inner">
@@ -107,7 +111,7 @@
     <button class="lb-btn lb-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6" /></svg></button>
     <button class="lb-btn lb-next" type="button" aria-label="Próxima"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6" /></svg></button>
     <figure>
-        <img src="" alt="" />
+        <img alt="" />
         <figcaption></figcaption>
     </figure>
 </div>
