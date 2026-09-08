@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\Users\caio_\Desktop\GAMASPPublishNew</_PublishTargetUrl>
-    <History>False|2026-09-08T15:46:11.9917696Z||;</History>
+    <History>False|2026-09-08T15:48:33.7700756Z||;False|2026-09-08T11:46:11.9917696-04:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>

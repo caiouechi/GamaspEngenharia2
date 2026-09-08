@@ -186,8 +186,6 @@
     <Content Include="images\gamasp\torres-blue-hour.jpg" />
     <Content Include="images\gamasp\galeria-living-w.jpg" />
     <Content Include="images\gamasp\galeria-living.jpg" />
-    <Content Include="images\gamasp-logo-branco.png" />
-    <Content Include="images\gamasp-logo-escuro.png" />
     <Content Include="images\gamasp\marca-gamasp-master.png" />
     <Content Include="images\gamasp\bg-blueprint-w.jpg" />
     <Content Include="images\gamasp\bg-blueprint.jpg" />
@@ -396,8 +394,6 @@
     <Content Include="images\icon2 - Copy.png" />
     <Content Include="images\icon2.png" />
     <Content Include="images\icon3.png" />
-    <Content Include="images\logo - Copy %282%29.png" />
-    <Content Include="images\logo - Copy.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\marker.png" />
     <Content Include="images\news-bg - Copy.jpg" />
