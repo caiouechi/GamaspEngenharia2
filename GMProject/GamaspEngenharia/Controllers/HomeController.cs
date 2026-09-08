@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Configuration;
 using System.IO;
 using System.Net;
@@ -124,7 +124,10 @@ namespace GamaspEngenharia.Controllers
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Trace.TraceError("Falha ao enviar e-mail de contato: " + ex);
+                // O Trace não é legível numa hospedagem compartilhada. Sem isto,
+                // qualquer falha de envio vira a mesma frase genérica e não há
+                // como descobrir se foi senha errada, porta bloqueada ou rede.
+                RegistraFalha(ex);
 
                 return Json(new
                 {
@@ -145,6 +148,15 @@ namespace GamaspEngenharia.Controllers
             var copia = Cfg("ContatoCopia", string.Empty);
             var remetente = Cfg("ContatoRemetente", "uodota@gmail.com");
             var remetenteNome = Cfg("ContatoRemetenteNome", "Site Gama SP Engenharia");
+            var senha = SenhaSmtp();
+
+            if (string.IsNullOrWhiteSpace(senha))
+            {
+                throw new InvalidOperationException(
+                    "A senha do SMTP não está configurada. Defina a variável de ambiente " +
+                    "GAMASP_SMTP_SENHA no servidor ou preencha a chave ContatoSenhaApp " +
+                    "no Web.config publicado.");
+            }
 
             using (var msg = new MailMessage())
             {
@@ -179,20 +191,8 @@ namespace GamaspEngenharia.Controllers
                 // Host, porta e SSL vêm de <system.net><mailSettings> no Web.config.
                 using (var smtp = new SmtpClient())
                 {
-                    // A senha pode vir de variável de ambiente, que tem prioridade
-                    // sobre o Web.config — assim ela não precisa ficar no repositório.
-                    var senha = Environment.GetEnvironmentVariable("GAMASP_SMTP_SENHA");
-                    if (string.IsNullOrWhiteSpace(senha))
-                    {
-                        senha = ConfigurationManager.AppSettings["ContatoSenhaApp"];
-                    }
-
-                    if (!string.IsNullOrWhiteSpace(senha))
-                    {
-                        smtp.UseDefaultCredentials = false;
-                        smtp.Credentials = new NetworkCredential(remetente, senha);
-                    }
-
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Credentials = new NetworkCredential(remetente, senha);
                     smtp.EnableSsl = true;
                     smtp.Timeout = 20000;
                     smtp.Send(msg);
@@ -249,6 +249,63 @@ namespace GamaspEngenharia.Controllers
         // ---------------------------------------------------------------
         // Auxiliares
         // ---------------------------------------------------------------
+
+        /// <summary>
+        /// A senha vem preferencialmente da variável de ambiente, para não
+        /// precisar ficar no Web.config (que está num repositório público).
+        /// </summary>
+        private static string SenhaSmtp()
+        {
+            var senha = Environment.GetEnvironmentVariable("GAMASP_SMTP_SENHA");
+            if (string.IsNullOrWhiteSpace(senha))
+            {
+                senha = ConfigurationManager.AppSettings["ContatoSenhaApp"];
+            }
+            return senha;
+        }
+
+        /// <summary>
+        /// Grava o erro real em App_Data/erros-envio.txt. Fica fora do alcance
+        /// do navegador (o IIS bloqueia App_Data) e pode ser lido por FTP.
+        /// </summary>
+        private static void RegistraFalha(Exception ex)
+        {
+            try
+            {
+                var pasta = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data");
+                if (string.IsNullOrEmpty(pasta)) return;
+
+                Directory.CreateDirectory(pasta);
+
+                var texto = new StringBuilder();
+                texto.AppendLine("================================================");
+                texto.AppendLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+                texto.AppendLine(ex.GetType().FullName + ": " + ex.Message);
+
+                var interna = ex.InnerException;
+                while (interna != null)
+                {
+                    texto.AppendLine("  -> " + interna.GetType().FullName + ": " + interna.Message);
+                    interna = interna.InnerException;
+                }
+
+                var smtpEx = ex as SmtpException;
+                if (smtpEx != null)
+                {
+                    texto.AppendLine("  StatusCode: " + smtpEx.StatusCode);
+                }
+
+                texto.AppendLine(ex.StackTrace);
+                texto.AppendLine();
+
+                System.IO.File.AppendAllText(
+                    Path.Combine(pasta, "erros-envio.txt"), texto.ToString(), Encoding.UTF8);
+            }
+            catch
+            {
+                // Registrar a falha nunca pode gerar outra falha.
+            }
+        }
 
         private static bool Ativo()
         {
