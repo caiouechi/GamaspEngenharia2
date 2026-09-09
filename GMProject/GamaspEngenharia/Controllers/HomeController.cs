@@ -71,6 +71,139 @@ namespace GamaspEngenharia.Controllers
         }
 
         // ---------------------------------------------------------------
+        // Diagnóstico do envio
+        // ---------------------------------------------------------------
+
+        /// <summary>
+        /// Mostra o estado da configuração de e-mail e o último erro real.
+        ///
+        /// Só responde se a chave DiagnosticoChave estiver definida no
+        /// Web.config e vier igual na querystring. Sem isso, devolve 404 —
+        /// nem revela que a página existe. Nunca imprime a senha.
+        ///
+        /// Uso: /Home/Diagnostico?chave=SUA-CHAVE
+        /// </summary>
+        [HttpGet]
+        public ActionResult Diagnostico(string chave)
+        {
+            var esperada = ConfigurationManager.AppSettings["DiagnosticoChave"];
+
+            if (string.IsNullOrWhiteSpace(esperada) ||
+                !string.Equals(chave, esperada, StringComparison.Ordinal))
+            {
+                return HttpNotFound();
+            }
+
+            var r = new StringBuilder();
+            r.AppendLine("DIAGNOSTICO DE ENVIO — Gama SP Engenharia");
+            r.AppendLine("gerado em " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+            r.AppendLine(new string('=', 56));
+            r.AppendLine();
+
+            r.AppendLine("CONFIGURACAO");
+            r.AppendLine("  ContatoAtivo ........ " + (Ativo() ? "sim" : "NAO (envio desligado)"));
+            r.AppendLine("  Destino ............. " + Cfg("ContatoDestino", "(vazio)"));
+            r.AppendLine("  Copia (CC) .......... " + Cfg("ContatoCopia", "(nenhuma)"));
+            r.AppendLine("  Remetente ........... " + Cfg("ContatoRemetente", "(vazio)"));
+
+            var doAmbiente = Environment.GetEnvironmentVariable("GAMASP_SMTP_SENHA");
+            var doConfig = ConfigurationManager.AppSettings["ContatoSenhaApp"];
+            var senha = SenhaSmtp();
+
+            r.AppendLine("  Senha configurada ... " + (string.IsNullOrWhiteSpace(senha)
+                ? "NAO  <-- e por isto que o envio falha"
+                : "sim (" + senha.Length + " caracteres)"));
+            r.AppendLine("     variavel de ambiente GAMASP_SMTP_SENHA: " +
+                         (string.IsNullOrWhiteSpace(doAmbiente) ? "vazia" : "definida"));
+            r.AppendLine("     chave ContatoSenhaApp no Web.config ...: " +
+                         (string.IsNullOrWhiteSpace(doConfig) ? "vazia" : "definida"));
+            r.AppendLine();
+
+            r.AppendLine("SERVIDOR DE SAIDA (system.net/mailSettings)");
+            try
+            {
+                var secao = ConfigurationManager.GetSection("system.net/mailSettings/smtp")
+                            as System.Net.Configuration.SmtpSection;
+                if (secao == null)
+                {
+                    r.AppendLine("  secao ausente");
+                }
+                else
+                {
+                    r.AppendLine("  Host ................ " + secao.Network.Host);
+                    r.AppendLine("  Porta ............... " + secao.Network.Port);
+                    r.AppendLine("  SSL/TLS ............. " + secao.Network.EnableSsl);
+                    r.AppendLine("  Usuario ............. " + secao.Network.UserName);
+                    r.AppendLine("  Senha no mailSettings " +
+                                 (string.IsNullOrEmpty(secao.Network.Password) ? "vazia" : "definida"));
+                }
+            }
+            catch (Exception ex)
+            {
+                r.AppendLine("  nao foi possivel ler: " + ex.Message);
+            }
+            r.AppendLine();
+
+            r.AppendLine("APP_DATA");
+            r.AppendLine("  " + EstadoAppData());
+            r.AppendLine();
+
+            r.AppendLine("ULTIMO ERRO REGISTRADO");
+            r.AppendLine(UltimoErro());
+
+            return Content(r.ToString(), "text/plain; charset=utf-8", Encoding.UTF8);
+        }
+
+        private static string EstadoAppData()
+        {
+            try
+            {
+                var pasta = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data");
+                if (string.IsNullOrEmpty(pasta)) return "caminho nao resolvido";
+
+                Directory.CreateDirectory(pasta);
+
+                var teste = Path.Combine(pasta, "escrita-teste.tmp");
+                System.IO.File.WriteAllText(teste, "ok");
+                System.IO.File.Delete(teste);
+
+                return "gravavel (backup dos contatos e log de erro funcionam)";
+            }
+            catch (Exception ex)
+            {
+                return "NAO gravavel: " + ex.Message;
+            }
+        }
+
+        private static string UltimoErro()
+        {
+            try
+            {
+                var pasta = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data");
+                var arquivo = Path.Combine(pasta ?? string.Empty, "erros-envio.txt");
+
+                if (!System.IO.File.Exists(arquivo))
+                {
+                    return "  nenhum erro registrado ate agora.";
+                }
+
+                var linhas = System.IO.File.ReadAllLines(arquivo, Encoding.UTF8);
+                var inicio = Math.Max(0, linhas.Length - 25);
+
+                var r = new StringBuilder();
+                for (var i = inicio; i < linhas.Length; i++)
+                {
+                    r.AppendLine("  " + linhas[i]);
+                }
+                return r.ToString();
+            }
+            catch (Exception ex)
+            {
+                return "  nao foi possivel ler o log: " + ex.Message;
+            }
+        }
+
+        // ---------------------------------------------------------------
         // Formulário de contato
         //
         // Entrega por SMTP autenticado (Gmail, STARTTLS na 587) — mesma
