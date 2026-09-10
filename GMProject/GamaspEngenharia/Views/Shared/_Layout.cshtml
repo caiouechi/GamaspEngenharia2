@@ -1,12 +1,12 @@
 ﻿@{
     var waNumero = "5511947430418";
-    var waTexto = "Ol%C3%A1!%20Vim%20pelo%20site%20da%20Gama%20SP%20Engenharia%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
+    var waTexto = "Ol%C3%A1!%20Vim%20pelo%20site%20da%20Gamasp%20Engenharia%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
     var waLink = "https://api.whatsapp.com/send?phone=" + waNumero + "&text=" + waTexto;
     // Base real do site (funciona na raiz e em subpasta/alias do IIS)
     var urlBase = new Uri(Request.Url, Url.Content("~/")).AbsoluteUri.TrimEnd('/');
     var urlAtual = new Uri(Request.Url, Request.RawUrl).GetLeftPart(UriPartial.Path);
     var acaoAtual = (ViewContext.RouteData.Values["action"] ?? "Index").ToString();
-    var titulo = ViewBag.Title != null ? ViewBag.Title + " | Gama SP Engenharia" : "Gama SP Engenharia | Engenharia Civil, Regularização e Obras em São Paulo";
+    var titulo = ViewBag.Title != null ? ViewBag.Title + " | Gamasp Engenharia" : "Gamasp Engenharia | Engenharia Civil, Regularização e Obras em São Paulo";
     var descricao = ViewBag.Descricao ?? "Engenharia civil de alto padrão em São Paulo: regularização de imóveis, gerenciamento de obras, projetos, AVCB, SPDA, segurança do trabalho e retrofit de fachadas. Orçamento sem compromisso.";
 }
 <!DOCTYPE html>
@@ -18,14 +18,14 @@
 
     <title>@titulo</title>
     <meta name="description" content="@descricao" />
-    <meta name="author" content="Gama SP Engenharia" />
+    <meta name="author" content="Gamasp Engenharia" />
     <meta name="theme-color" content="#1D2128" />
     <link rel="canonical" href="@urlAtual" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Gama SP Engenharia" />
+    <meta property="og:site_name" content="Gamasp Engenharia" />
     <meta property="og:title" content="@titulo" />
     <meta property="og:description" content="@descricao" />
     <meta property="og:image" content="@(urlBase)/images/gamasp/hero-obra-w.jpg" />
@@ -45,7 +45,7 @@
         {
           "@@context": "https://schema.org",
           "@@type": "GeneralContractor",
-          "name": "Gama SP Engenharia",
+          "name": "Gamasp Engenharia",
           "description": "Engenharia civil, regularização de imóveis, gerenciamento de obras, projetos e segurança do trabalho em São Paulo.",
           "url": "@urlBase",
           "telephone": "+5511947430418",
@@ -85,10 +85,10 @@
             </ul>
 
             <div class="topbar-social">
-                <a href="https://www.facebook.com/gamasp.engenharia" target="_blank" rel="noopener" aria-label="Facebook da Gama SP Engenharia">
+                <a href="https://www.facebook.com/gamasp.engenharia" target="_blank" rel="noopener" aria-label="Facebook da Gamasp Engenharia">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1Z" /></svg>
                 </a>
-                <a href="@waLink" target="_blank" rel="noopener" aria-label="WhatsApp da Gama SP Engenharia">
+                <a href="@waLink" target="_blank" rel="noopener" aria-label="WhatsApp da Gamasp Engenharia">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6a11.4 11.4 0 0 1-4.4-3.9c-.3-.5-.8-1.3-.8-2.5s.6-1.8.9-2c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.2.1.4.1.6-.1l.8-1c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.2Z" /></svg>
                 </a>
             </div>
@@ -98,7 +98,7 @@
     <!-- ==================== Cabeçalho ==================== -->
     <header class="site-header">
         <div class="shell">
-            <a href="@Url.Action("Index", "Home")" class="brand" aria-label="Gama SP Engenharia — página inicial">
+            <a href="@Url.Action("Index", "Home")" class="brand" aria-label="Gamasp Engenharia — página inicial">
                 @Html.Partial("_Marca", "header")
             </a>
 
@@ -179,7 +179,7 @@
                 <div class="footer-col">
                     <h4>Responsável Técnico</h4>
                     <div class="footer-creds">
-                        <div><b>Razão social:</b> <span>Gama SP Engenharia</span></div>
+                        <div><b>Razão social:</b> <span>Gamasp Engenharia</span></div>
                         <div><b>CNPJ:</b> <span>12.737.657/0001-15</span></div>
                         <div><b>CREA empresa:</b> <span>2223278</span></div>
                         <div><b>Engenheiro:</b> <span>Cícero Gama — CREA 5070392074</span></div>
@@ -191,7 +191,7 @@
             </div>
 
             <div class="footer-bar">
-                <span>&copy; <span data-year>2026</span> Gama SP Engenharia. Todos os direitos reservados.</span>
+                <span>&copy; <span data-year>2026</span> Gamasp Engenharia. Todos os direitos reservados.</span>
                 <span>
                     <a href="mailto:comercial@gamaspengenharia.com.br">comercial@gamaspengenharia.com.br</a>
                     &nbsp;·&nbsp;
@@ -202,7 +202,7 @@
     </footer>
 
     <!-- Botão flutuante do WhatsApp -->
-    <a class="wa-float" href="@waLink" target="_blank" rel="noopener" aria-label="Falar com a Gama SP Engenharia no WhatsApp">
+    <a class="wa-float" href="@waLink" target="_blank" rel="noopener" aria-label="Falar com a Gamasp Engenharia no WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6a11.4 11.4 0 0 1-4.4-3.9c-.3-.5-.8-1.3-.8-2.5s.6-1.8.9-2c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.2.1.4.1.6-.1l.8-1c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.2Z" /></svg>
         <b>Fale conosco</b>
     </a>

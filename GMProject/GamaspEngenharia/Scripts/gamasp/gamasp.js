@@ -1,5 +1,5 @@
 /* =============================================================
-   GAMA SP ENGENHARIA — interações do site
+   GAMASP ENGENHARIA — interações do site
    Sem dependências externas.
    ============================================================= */
 (function () {

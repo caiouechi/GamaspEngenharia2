@@ -95,7 +95,7 @@ namespace GamaspEngenharia.Controllers
             }
 
             var r = new StringBuilder();
-            r.AppendLine("DIAGNOSTICO DE ENVIO — Gama SP Engenharia");
+            r.AppendLine("DIAGNOSTICO DE ENVIO — Gamasp Engenharia");
             r.AppendLine("gerado em " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
             r.AppendLine(new string('=', 56));
             r.AppendLine();
@@ -280,7 +280,7 @@ namespace GamaspEngenharia.Controllers
             var destino = Cfg("ContatoDestino", "comercial@gamaspengenharia.com.br");
             var copia = Cfg("ContatoCopia", string.Empty);
             var remetente = Cfg("ContatoRemetente", "uodota@gmail.com");
-            var remetenteNome = Cfg("ContatoRemetenteNome", "Site Gama SP Engenharia");
+            var remetenteNome = Cfg("ContatoRemetenteNome", "Site Gamasp Engenharia");
             var senha = SenhaSmtp();
 
             if (string.IsNullOrWhiteSpace(senha))
